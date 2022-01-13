@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        tools:context=".Activity.ReferralActivity">
+        <androidx.appcompat.widget.Toolbar
+            android:visibility="gone"
+            android:id="@+id/toolbarlyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_botom_round">
+            <LinearLayout
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <RelativeLayout
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:id="@+id/toolbarrecy"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/menu"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:background="@drawable/ic_sidemenu">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/title_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_toEndOf="@+id/menu"
+                        android:fontFamily="@font/overpass_regular"
+                        android:text="@string/add_fund_txt"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_16sdp"></TextView>
+
+                    <ImageView
+
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/notification_icon"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:background="@drawable/notificatin">
+
+                    </ImageView>
+
+                    <ImageView
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_height="@dimen/_19sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_toStartOf="@+id/notification_icon"
+                        android:background="@drawable/filter">
+
+                    </ImageView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:id="@+id/first_lyt"
+                    android:layout_below="@+id/toolbarrecy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/account_balance_lable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:fontFamily="@font/overpass_regular"
+                        android:text="@string/account_balance_txt"
+                        android:textColor="@color/headline"
+                        android:textSize="@dimen/_12sdp"></TextView>
+
+                    <TextView
+                        android:id="@+id/account_balance_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/account_balance_lable"
+
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:text="@string/account_balance_txt"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/_18sdp"></TextView>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/_22sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_gravity="center"
+                            android:id="@+id/totalreferal_lable"
+                            android:layout_below="@+id/toolbarlyt"
+                            android:text="@string/interested_paid_balance"
+                            android:textColor="@color/headline"
+                            android:textSize="@dimen/_10sdp"
+                            android:fontFamily="@font/overpass_regular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+
+                        <TextView
+                            android:layout_gravity="end"
+                            android:id="@+id/toalreferal_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/account_balance_lable"
+
+                            android:fontFamily="@font/overpass_regular"
+                            android:textSize="@dimen/_12sdp"
+
+                            android:text="@string/account_balance_txt"
+                            android:textColor="@color/white"></TextView>
+
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <ScrollView
+            android:layout_below="@+id/toolbarlyt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/baseaccount_lyt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp">
+
+                    <TextView
+                        android:id="@+id/baseaccount_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/overpass_semibold"
+                        android:text="Please select the plan before adding funds:"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp">
+
+                    </TextView>
+
+                    <RadioGroup
+                        android:id="@+id/groop"
+                        android:layout_below="@+id/baseaccount_tag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/monthly_radio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:fontFamily="@font/overpass_light"
+                            android:layoutDirection="ltr"
+                            android:checked="true"
+                            android:buttonTint="@color/colorPrimaryDark"
+                            android:textAlignment="textStart"
+                            android:layout_gravity="start"
+                            android:text="Monthly Payment"
+                            android:textColor="@color/headline"
+                            android:textSize="@dimen/_11sdp" />
+                        <RadioButton
+                            android:id="@+id/reinves_radio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:fontFamily="@font/overpass_light"
+                            android:layoutDirection="ltr"
+                            android:buttonTint="@color/colorPrimaryDark"
+                            android:textAlignment="textStart"
+                            android:layout_gravity="start"
+                            android:text="Re-investment Plan"
+                            android:textColor="@color/headline"
+                            android:textSize="@dimen/_11sdp" />
+
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:id="@+id/interestpaid_lyt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/toolbarlyt">
+
+                    <TextView
+                        android:id="@+id/interestpaid_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/overpass_semibold"
+                        android:text="Top-up Account Wallet"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/note_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/interestpaid_tag"
+                        android:fontFamily="@font/overpass_regular"
+                                              android:textColor="@color/headline"
+                        android:textSize="@dimen/_10sdp">
+
+                    </TextView>
+
+                    <RelativeLayout
+
+                        android:id="@+id/interestpaid_lytt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/note_tag"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:background="@drawable/bg_btn_border_back">
+
+                        <ImageView
+                            android:id="@+id/interestpaid_logo"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:background="@drawable/money"></ImageView>
+
+                        <EditText
+                            android:id="@+id/interestpaid_txt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_15sdp"
+                            android:layout_toEndOf="@+id/interestpaid_logo"
+                            android:background="@null"
+                            android:fontFamily="@font/overpass_regular"
+                            android:hint="@string/enter_amount_txt"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/headline"
+                            android:textCursorDrawable="@drawable/edit_corsor_color_gray"
+
+                            android:textSize="@dimen/_11sdp">
+
+                        </EditText>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/interestpaid_exa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/interestpaid_lytt"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+
+                        android:background="@null"
+                        android:fontFamily="@font/overpass_italic"
+
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/headline"
+
+                        android:textSize="@dimen/_10sdp">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:id="@+id/termandcondition_lyt"
+                    android:layout_below="@+id/waiting_layout"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/termandcondition_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/termandcondition_box"
+                        android:textSize="@dimen/_10sdp">
+
+                    </TextView>
+
+                    <CheckBox
+                        android:id="@+id/termandcondition_box"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+
+                        android:layout_marginRight="10dp"
+                        android:buttonTint="@color/colorPrimaryDark"
+
+                        >
+
+                    </CheckBox>
+                </RelativeLayout>
+                <TextView
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:id="@+id/requerst_now_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/forgetpassword_txt"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/gradient_history"
+                    android:fontFamily="@font/overpass_semibold"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_7sdp"
+                    android:paddingBottom="@dimen/_7sdp"
+                    android:text="Proceed"
+                    android:textAlignment="center"
+
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"></TextView>
+                <TextView
+                    android:visibility="visible"
+                    android:id="@+id/note_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/forgetpassword_txt"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/overpass_regular"
+                    android:gravity="center"
+
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10sdp"></TextView>
+
+
+
+            </LinearLayout>
+
+
+
+        </ScrollView>
+
+
+
+
+    </RelativeLayout>
+</layout>

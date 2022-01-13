@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#99000000"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:background="@drawable/bg_btn_border_back"
+        android:backgroundTint="@color/white">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView_home_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:id="@+id/cv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listtt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:visibility="visible">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/nodata"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:gravity="center"
+                    android:text="No Data Found"
+                    android:visibility="gone"></TextView>
+
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+        <ProgressBar
+            android:id="@+id/progressBardialog"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginLeft="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:indeterminateDrawable="@drawable/loder"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/send_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nestedScrollView_home_fragment"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/gradient_history"
+            android:fontFamily="@font/overpass_regular"
+            android:gravity="center"
+            android:paddingTop="@dimen/_4sdp"
+            android:paddingBottom="@dimen/_4sdp"
+            android:text="Clear Filter"
+            android:textAlignment="center"
+
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"></TextView>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

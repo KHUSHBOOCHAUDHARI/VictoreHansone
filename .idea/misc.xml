@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/bg_botom_round.xml" value="0.2152777777777778" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/bg_botom_round_min.xml" value="0.13518518518518519" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/bg_btn_border.xml" value="0.21481481481481482" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/bg_btn_border_back.xml" value="0.20925925925925926" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/bg_btn_border_dash_back.xml" value="0.5" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/bg_btn_border_white_place.xml" value="0.1388888888888889" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/bg_top_round.xml" value="0.1037037037037037" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/bottomtoolbar.xml" value="0.12083333333333333" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/btn_nav_header_color.xml" value="0.28055555555555556" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/cursor.xml" value="0.20462962962962963" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/drawar_selectcolor_imagecolor.xml" value="0.13518518518518519" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/drawar_selectcolor_textcolor.xml" value="0.13518518518518519" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/edit_corsor_color_gray.xml" value="0.19814814814814816" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/gradient_history.xml" value="0.21481481481481482" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/ic__wallet.xml" value="0.12083333333333333" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/ic_phonee.xml" value="0.13240740740740742" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/ic_sidemenu.xml" value="0.28055555555555556" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/logo_gradiant.xml" value="0.16296296296296298" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/rounded_circle.xml" value="0.1388888888888889" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/selector.xml" value="0.2638888888888889" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/tool_lyt.xml" value="0.22709030100334449" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/activity_add_address.xml" value="0.25" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/activity_address_list.xml" value="0.18" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/activity_change_password.xml" value="0.26627218934911245" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/activity_conformation.xml" value="0.18" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/activity_contact_us.xml" value="0.2692307692307692" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/activity_detail.xml" value="0.27692307692307694" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/activity_edit_profile.xml" value="0.29475587703435807" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/activity_email_verification.xml" value="0.18" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/activity_faq.xml" value="0.27692307692307694" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/activity_filter.xml" value="0.2" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/activity_filter_detail.xml" value="0.16" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/activity_login.xml" value="0.18" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/activity_main2.xml" value="0.23796296296296296" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/activity_notification.xml" value="0.16" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/activity_payment_setting.xml" value="0.22" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/activity_payment_setting_list.xml" value="0.18571428571428572" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/activity_pdfuploade.xml" value="0.22" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/activity_privacy_policy.xml" value="0.27692307692307694" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/activity_referral.xml" value="0.2" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/activity_signup.xml" value="0.21703296703296704" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/activity_splace.xml" value="0.25" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/activity_start.xml" value="0.21891891891891893" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/activity_termand_condition.xml" value="0.27692307692307694" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/activity_withdrawal_fund_list.xml" value="0.2" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/activity_withdrow_fud_three.xml" value="0.21398002853067047" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/add_fund_layout.xml" value="0.21891891891891893" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/addfund_fragment.xml" value="0.18" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/all_transection_list.xml" value="0.20718232044198895" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/app_bar_main.xml" value="0.1" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/coin_list_item.xml" value="0.16" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/contact_list.xml" value="0.27692307692307694" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/content_main.xml" value="0.27692307692307694" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/crypto_opt_list.xml" value="0.16" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/crypto_pro_list.xml" value="0.2" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/dialog_detail.xml" value="0.22" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/dialog_detail_new.xml" value="0.25" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/dialog_filter.xml" value="0.2" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/dialog_forgetpassword.xml" value="0.18" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/dialog_withdraw_success.xml" value="0.22888283378746593" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/filter_dialog_dialog.xml" value="0.14" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/filter_list.xml" value="0.3456561922365989" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/fragment_bottomsheet_coin.xml" value="0.1" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/fragment_camera_bottomsheet.xml" value="0.18" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/fragment_gallery.xml" value="0.27692307692307694" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/fragment_home.xml" value="0.27692307692307694" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/fragment_slideshow.xml" value="0.27692307692307694" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/fragment_withdrawallist_bottomsheet.xml" value="0.3070283600493218" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/history_fragment.xml" value="0.22" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/monthly_list.xml" value="0.27692307692307694" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/nav_header_main.xml" value="0.22" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/network_list_item.xml" value="0.16" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/notificatio_list.xml" value="0.33" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/payment_list.xml" value="0.5" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/payment_setting_list.xml" value="0.22" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/peyment_opt_list.xml" value="0.2" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/profile_fragment.xml" value="0.18" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/referal_list.xml" value="0.25" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/toolbar.xml" value="0.27692307692307694" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/transection_list.xml" value="0.2" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/wallet_fragment.xml" value="0.16" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/withdrow_crypto_opt_list.xml" value="0.22" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/withdrow_crypto_pro_list.xml" value="0.27692307692307694" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/withdrow_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/layout/withdrow_peyment_opt_list.xml" value="0.25" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/menu/activity_main2_drawer.xml" value="0.27692307692307694" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/menu/activity_main_drawer.xml" value="0.33" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/menu/edit_address_menu.xml" value="0.1" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/menu/main.xml" value="0.27692307692307694" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/menu/main2.xml" value="0.27692307692307694" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/menu/no_menu.xml" value="0.27692307692307694" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/menu/point_menu.xml" value="0.27692307692307694" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.17962962962962964" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

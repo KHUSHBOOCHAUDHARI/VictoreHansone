@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:background="#99000000"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:background="@drawable/bg_btn_border_back"
+        android:backgroundTint="@color/white"
+        >
+        <ImageView
+            android:id="@+id/coin"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/ic_coin"
+            ></ImageView>
+
+        <TextView
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/coin"
+
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/overpass_bold"
+            android:text="Congratulations"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"></TextView>
+
+        <TextView
+            android:layout_marginTop="@dimen/_5sdp"
+            android:id="@+id/message_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_txt"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/overpass_regular"
+            android:text="Your Withdrawn Request Submitted Successfully"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"></TextView>
+
+
+
+        <ProgressBar
+            android:layout_marginTop="@dimen/_10sdp"
+            android:visibility="gone"
+            android:id="@+id/progressBardialog"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+
+            android:layout_marginLeft="@dimen/_100sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:indeterminateDrawable="@drawable/loder"
+            />
+
+        <TextView
+            android:id="@+id/send_btn"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@+id/message_txt"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/gradient_history"
+            android:fontFamily="@font/overpass_regular"
+            android:gravity="center"
+            android:paddingTop="@dimen/_4sdp"
+            android:paddingBottom="@dimen/_4sdp"
+            android:text="Done"
+
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"></TextView>
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

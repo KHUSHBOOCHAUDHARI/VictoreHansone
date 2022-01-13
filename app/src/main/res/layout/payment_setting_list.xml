@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/tools"
+    android:id="@+id/UserPinCardView"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:cardciew="http://schemas.android.com/apk/res-auto"
+    cardciew:cardCornerRadius="@dimen/_5sdp"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:background="@drawable/bg_btn_border_back"
+    android:layout_marginTop="10dp"
+
+    app:ignore="NamespaceTypo">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView_pro"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:src="@drawable/delete"
+            android:tint="@color/white"
+            android:visibility="visible"
+            app:ignore="UseAppTint" />
+
+
+
+
+
+
+        <RelativeLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/titlelyt"
+
+
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address :"
+                android:textColor="@color/headline"
+                android:textSize="@dimen/_11sdp"
+
+                ></TextView>
+
+            <TextView
+                android:id="@+id/address_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/title"
+
+                android:text="@string/crypto_address_txt"
+                android:textColor="@color/headline"
+                android:textSize="@dimen/_11sdp"></TextView>>
+        </RelativeLayout>
+
+        <LinearLayout
+
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:id="@+id/cryptolablelyt"
+            android:layout_below="@+id/titlelyt"
+
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/crypto_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/headline"
+                android:textSize="@dimen/_11sdp"
+
+                android:text="Wallet :"
+                >
+
+
+            </TextView>
+            <TextView
+                android:id="@+id/wallet_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/headline"
+                android:textSize="@dimen/_11sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+
+
+                ></TextView>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

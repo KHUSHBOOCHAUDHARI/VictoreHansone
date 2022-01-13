@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/black"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarlyt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:background="@drawable/bg_botom_round">
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp">
+
+                <ImageView
+                    android:id="@+id/menu"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_centerVertical="true"
+
+                    android:background="@drawable/ic_back">
+
+                </ImageView>
+
+                <TextView
+
+                    android:id="@+id/title_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toEndOf="@+id/menu"
+                    android:fontFamily="@font/overpass_regular"
+                    android:text="@string/withdraw_funds_txt"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sdp"></TextView>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/view_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+
+                    android:fontFamily="@font/overpass_regular"
+                    android:text="View Contract"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"></TextView>
+
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/notification_icon"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:background="@drawable/notificatin">
+
+                </ImageView>
+
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_19sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_toStartOf="@+id/notification_icon"
+                    android:background="@drawable/filter">
+
+                </ImageView>
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView_home_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbarlyt"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/layout"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <RelativeLayout
+
+                android:id="@+id/main_lyt"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_btn_border_back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:id="@+id/totallayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/tottal_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:text="Fund Amount"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"></TextView>
+
+                    <TextView
+                        android:id="@+id/tottal_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"></TextView>
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_below="@id/totallayout"
+                    android:id="@+id/cancellationlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/cancelation_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:text="Cancellation Charge"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"></TextView>
+
+                    <TextView
+                        android:id="@+id/cancelation_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"></TextView>
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_below="@id/cancellationlayout"
+                    android:id="@+id/interestlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/interes_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:text="Interest"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"></TextView>
+
+                    <TextView
+                        android:id="@+id/interest_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"></TextView>
+
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/totalllayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/interestlayout"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/totall_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:text="Total Amount"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"></TextView>
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/montg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:text="Total Amount"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"></TextView>
+
+                    <TextView
+                        android:id="@+id/totall_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="visible"></TextView>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/radiolayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/totalllayout"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp">
+
+                    <RadioButton
+                        android:id="@+id/fullamount_radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:buttonTint="@color/colorPrimaryDark"
+                        android:checked="true"
+                        android:fontFamily="@font/overpass_light"
+                        android:layoutDirection="ltr"
+                        android:text="Full amount"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+
+                        android:textSize="@dimen/_11sdp" />
+
+                    <RadioButton
+
+                        android:id="@+id/partially_radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="4dp"
+                        android:buttonTint="@color/colorPrimaryDark"
+                        android:fontFamily="@font/overpass_light"
+                        android:layoutDirection="ltr"
+                        android:text="Partially"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+
+                        android:textSize="@dimen/_11sdp" />
+
+                </RelativeLayout>
+  <RelativeLayout
+
+                    android:visibility="gone"
+                    android:id="@+id/interestpaid_lytt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/radiolayout"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+
+                  >
+
+                <RelativeLayout
+                    android:id="@+id/intt"
+                    android:visibility="visible"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+
+                    android:background="@drawable/bg_btn_border">
+
+                    <ImageView
+                        android:id="@+id/interestpaid_logo"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:layout_marginBottom="@dimen/_7sdp"
+                        android:background="@drawable/money"></ImageView>
+
+                    <EditText
+                        android:id="@+id/interestpaid_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_15sdp"
+                        android:layout_toEndOf="@+id/interestpaid_logo"
+                        android:background="@null"
+                        android:fontFamily="@font/overpass_regular"
+                        android:hint="@string/enter_amount_txt"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/headline"
+                        android:textCursorDrawable="@drawable/edit_corsor_color_gray"
+
+                        android:textSize="@dimen/_11sdp">
+
+                    </EditText>
+
+
+
+                </RelativeLayout>
+
+      <TextView
+          android:id="@+id/note"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/intt"
+          android:layout_marginTop="@dimen/_5sdp"
+
+          android:text="Note:"
+          android:textColor="@color/newred"
+          android:textSize="@dimen/_10sdp"></TextView>
+
+      <TextView
+          android:id="@+id/notemsg"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/intt"
+          android:layout_marginLeft="@dimen/_5sdp"
+          android:layout_marginTop="@dimen/_5sdp"
+          android:layout_toEndOf="@+id/note"
+
+          android:textColor="@color/white"
+          android:textSize="@dimen/_10sdp"></TextView>
+
+  </RelativeLayout>
+
+            </RelativeLayout>
+                <TextView
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:id="@+id/requerst_now_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/forgetpassword_txt"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/gradient_history"
+                    android:fontFamily="@font/overpass_semibold"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:text="Done"
+                    android:textAlignment="center"
+
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"></TextView>
+                <TextView
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:id="@+id/cal_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/forgetpassword_txt"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/gradient_history"
+                    android:fontFamily="@font/overpass_semibold"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:text="Calculation"
+                    android:textAlignment="center"
+
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"></TextView>
+
+            </LinearLayout>
+
+
+
+        </androidx.core.widget.NestedScrollView>
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progressBar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/textView_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="No Data Found"
+            android:textColor="@color/headline"
+            android:visibility="gone"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_home_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:visibility="gone"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/filter" />
+
+
+        <ProgressBar
+
+            android:id="@+id/progressbar_loadmore"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:indeterminateTint="@color/colorPrimaryDark"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/text_keyword_hide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text=""
+            android:visibility="gone"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+</layout>
+

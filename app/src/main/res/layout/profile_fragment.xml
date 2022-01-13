@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="@color/black"
+        android:layout_height="match_parent"
+
+        >
+
+        <androidx.appcompat.widget.Toolbar
+
+            android:visibility="gone"
+            android:id="@+id/toolbarlyt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:background="@drawable/bg_botom_round">
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp">
+
+                <ImageView
+                    android:id="@+id/menu"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:background="@drawable/ic_sidemenu">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/title_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toEndOf="@+id/menu"
+                    android:fontFamily="@font/overpass_regular"
+                    android:text="@string/profile_setting_txt"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sdp"></TextView>
+
+                <ImageView
+
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/notification_icon"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:background="@drawable/notificatin">
+
+                </ImageView>
+
+                <ImageView
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_19sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_toStartOf="@+id/notification_icon"
+                    android:background="@drawable/filter">
+
+                </ImageView>
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbarlyt"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/payment_setting_lyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_btn_border_back">
+
+                <ImageView
+                    android:id="@+id/payment_logo"
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginBottom="@dimen/_7sdp"
+                    android:background="@drawable/ic_proseting"></ImageView>
+
+                <TextView
+                    android:id="@+id/payment_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/payment_logo"
+                    android:fontFamily="@font/overpass_regular"
+                    android:text="@string/payment_setting_txt"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"></TextView>
+
+                <ImageView
+                    android:id="@+id/payment_back"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/ic_right"></ImageView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/changepassword_lyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_btn_border_back">
+
+                <ImageView
+                    android:id="@+id/changepassword_logo"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginBottom="@dimen/_7sdp"
+                    android:background="@drawable/changepassword"></ImageView>
+
+                <TextView
+                    android:id="@+id/changepassword_txt"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/changepassword_logo"
+                    android:fontFamily="@font/overpass_regular"
+                    android:text="@string/change_pasword_txt"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"></TextView>
+
+                <ImageView
+                    android:id="@+id/changepassword_back"
+                    android:layout_width="@dimen/_11sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/ic_right"></ImageView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/faqlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_btn_border_back">
+
+                <ImageView
+                    android:id="@+id/faq_logo"
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginBottom="@dimen/_7sdp"
+                    android:background="@drawable/faq"></ImageView>
+
+                <TextView
+                    android:id="@+id/faq_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/faq_logo"
+                    android:fontFamily="@font/overpass_regular"
+                    android:text="@string/faq_txt"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"></TextView>
+
+                <ImageView
+                    android:id="@+id/faq_back"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/ic_right"></ImageView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/privacy_lyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_btn_border_back">
+
+                <ImageView
+                    android:id="@+id/privacy_logo"
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginBottom="@dimen/_7sdp"
+                    android:background="@drawable/privacypolicy"></ImageView>
+
+                <TextView
+                    android:fontFamily="@font/overpass_regular"
+
+                    android:id="@+id/privacy_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/privacy_logo"
+                    android:text="@string/privacy_policy_txt"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"></TextView>
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/privacy_back"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/ic_right"></ImageView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/contact_lyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_btn_border_back">
+
+                <ImageView
+                    android:id="@+id/contactus_logo"
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginBottom="@dimen/_7sdp"
+                    android:background="@drawable/contactus"></ImageView>
+
+                <TextView
+                    android:id="@+id/contactus_txt"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/contactus_logo"
+                    android:fontFamily="@font/overpass_regular"
+                    android:text="@string/contact_us_txt"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"></TextView>
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/contactus_back"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/ic_right"></ImageView>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/addresslist_lyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_btn_border_back">
+
+                <ImageView
+                    android:id="@+id/addresslist_logo"
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginBottom="@dimen/_7sdp"
+                    android:background="@drawable/contactus"></ImageView>
+
+                <TextView
+                    android:id="@+id/addresslist_txt"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/addresslist_logo"
+                    android:fontFamily="@font/overpass_regular"
+                    android:text="Address List"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"></TextView>
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/addresslist_back"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/ic_right"></ImageView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/log_out"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_btn_border_back">
+
+                <ImageView
+                    android:id="@+id/logout_logo"
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginBottom="@dimen/_7sdp"
+                    android:background="@drawable/logout"></ImageView>
+
+                <TextView
+                    android:id="@+id/logout_txt"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/logout_logo"
+                    android:fontFamily="@font/overpass_regular"
+                    android:text="@string/logout_txt"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"></TextView>
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/logout_back"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+
+                    android:layout_marginRight="@dimen/_10sdp"
+
+                    android:background="@drawable/ic_right"></ImageView>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>
