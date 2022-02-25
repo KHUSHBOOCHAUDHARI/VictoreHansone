@@ -7,8 +7,10 @@
     android:orientation="vertical"
     xmlns:cardciew="http://schemas.android.com/apk/res-auto"
     cardciew:cardCornerRadius="@dimen/_5sdp"
-
+    android:layout_marginRight="@dimen/_10sdp"
+    android:layout_marginLeft="@dimen/_10sdp"
     android:background="@drawable/bg_btn_border_back"
+    android:backgroundTint="@color/white"
     android:layout_marginTop="10dp"
     app:ignore="NamespaceTypo">
 
@@ -23,7 +25,7 @@
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:src="@drawable/historylog" />
+            android:src="@drawable/documenticon" />
 
 
 
@@ -45,54 +47,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Title"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="@dimen/_12sdp"
                 android:textStyle="bold"></TextView>
 
             <TextView
-                android:visibility="visible"
                 android:id="@+id/status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_marginRight="@dimen/_10sdp"
-                android:text="Title"
+                android:text="Completed"
                 android:textColor="@color/green"
                 android:textSize="@dimen/_11sdp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold"
+                android:visibility="visible"></TextView>
 
         </RelativeLayout>
-        <LinearLayout
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="@dimen/_2sdp"
-            android:id="@+id/totalamount_lyt"
-            android:layout_below="@+id/titlelyt"
-            android:layout_toEndOf="@+id/imageView_pro"
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/totalamount_lable"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/headline"
-                android:textSize="@dimen/_11sdp"
-                android:text="@string/totla_amount_txt"
-                >
-
-
-            </TextView>
-            <TextView
-                android:layout_marginLeft="@dimen/_5sdp"
-                android:id="@+id/totalamount_txt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/headline"
-                android:textSize="@dimen/_11sdp"
-                android:text="14/04/21"
-
-                ></TextView>
-        </LinearLayout>
         <LinearLayout
 
             android:layout_marginLeft="10dp"
@@ -127,6 +98,38 @@
                 ></TextView>
         </LinearLayout>
         <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:id="@+id/totalamount_lyt"
+            android:layout_below="@+id/titlelyt"
+            android:layout_toEndOf="@+id/imageView_pro"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/totalamount_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/headline"
+                android:textSize="@dimen/_11sdp"
+                android:text="Amount:"
+                >
+
+
+            </TextView>
+            <TextView
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:id="@+id/totalamount_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/headline"
+                android:textSize="@dimen/_11sdp"
+                android:text="14/04/21"
+
+                ></TextView>
+        </LinearLayout>
+
+        <LinearLayout
 
             android:layout_marginLeft="10dp"
 
@@ -143,7 +146,7 @@
                 android:textColor="@color/headline"
                 android:textSize="@dimen/_11sdp"
 
-                android:text="Plane:"
+                android:text="Txn Id:"
                 >
 
 

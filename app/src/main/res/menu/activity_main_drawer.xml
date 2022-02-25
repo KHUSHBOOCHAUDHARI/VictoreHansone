@@ -4,12 +4,7 @@
 
         <group android:checkableBehavior="single">
 
-        <item
-            android:id="@+id/addfund"
-            android:checked="true"
-            android:title="@string/add_fund_txt"
-            app:iconTint="@drawable/selector"
-            />
+
         <!-- upload_video-->
         <item
             android:id="@+id/wallet"
@@ -18,25 +13,21 @@
             />
         <item
             android:id="@+id/transection"
-            android:title="@string/transaction_history_txt"
+            android:title="@string/history_txt"
             app:iconTint="@drawable/selector"
             />
-                <item
-                    android:id="@+id/faq"
-                    android:title="@string/faq_txt"
-                    app:iconTint="@drawable/selector"
-                    />
+            
 
         <item
-            android:id="@+id/privacypolicy"
+            android:id="@+id/send"
 
-            android:title="@string/privacy_policy_txt"
+            android:title="@string/send_text"
             app:iconTint="@drawable/selector"
             />
         <item
-            android:id="@+id/contactus"
+            android:id="@+id/recieved"
 
-            android:title="@string/contact_us_txt"
+            android:title="@string/receive_txt"
             app:iconTint="@drawable/selector"
             />
         <item

@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.business.cryptosoar">
+    package="com.business.agrocoin">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
 
     <application
-        android:name=".Util.YouApplication"
+        android:name="com.business.agrocoin.Util.YouApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -18,82 +17,41 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Activity.NotificationActivity"
+            android:name="com.business.agrocoin.Activity.ScanBarCodeActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.DetailActivity"
+            android:name="com.business.agrocoin.Activity.NotificationActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.TermandCondition"
+            android:name="com.business.agrocoin.Activity.TermandCondition"
             android:exported="false" />
         <activity
-            android:name=".Activity.FilterDetailActivity"
+            android:name="com.business.agrocoin.Activity.EditProfile"
             android:exported="false" />
         <activity
-            android:name=".Activity.EditProfile"
+            android:name="com.business.agrocoin.Activity.PrivacyPolicy"
             android:exported="false" />
         <activity
-            android:name=".Activity.WithdrowFudThreeActivity"
+            android:name="com.business.agrocoin.Activity.FaqActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.WithdrawalFundListActivity"
+            android:name="com.business.agrocoin.Activity.ContactUsActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.FilterActivity"
+            android:name="com.business.agrocoin.Activity.ChangePasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.PrivacyPolicy"
+            android:name="com.business.agrocoin.Activity.SignupActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.FaqActivity"
+            android:name="com.business.agrocoin.Activity.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.ContactUsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activity.ChangePasswordActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activity.PaymentSettingActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Main2Activity"
-            android:exported="false"
-            android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Activity.PDFUploade"
-            android:exported="false" />
-        <activity
-            android:name=".Activity.AddressListActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activity.AddAddressActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activity.ConformationActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activity.ReferralActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activity.StartActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activity.EmailVerificationActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activity.SignupActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activity.LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activity.MainActivity"
+            android:name="com.business.agrocoin.Activity.MainActivity"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Activity.SplaceActivity"
+            android:name="com.business.agrocoin.Activity.SplaceActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -124,14 +82,14 @@
 
         <service android:name="com.google.android.gms.analytics.CampaignTrackingService" />
         <service
-            android:name=".Util.MyFirebaseMessagingService"
+            android:name="com.business.agrocoin.Util.MyFirebaseMessagingService"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
         <service
-            android:name=".Util.MyFirebaseInstanceIDService"
+            android:name="com.business.agrocoin.Util.MyFirebaseInstanceIDService"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />

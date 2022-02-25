@@ -3,6 +3,50 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/drawable/bg_btn_border_back.xml" value="2.0" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/drawable/bg_btn_border_white_place.xml" value="0.28649789029535866" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/drawable/edit_corsor_color_gray.xml" value="0.2351851851851852" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/drawable/gradient_history.xml" value="0.28649789029535866" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/drawable/ic_baseline_qr_code_scanner_24.xml" value="0.17314814814814813" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/drawable/ic_outline_visibility_off_24.xml" value="0.28649789029535866" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/activity_add_address.xml" value="0.27692307692307694" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/activity_conformation.xml" value="0.27692307692307694" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/activity_contact_us.xml" value="0.26962025316455696" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/activity_detail.xml" value="0.26962025316455696" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/activity_edit.xml" value="0.26962025316455696" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/activity_edit_profile.xml" value="0.26962025316455696" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/activity_main.xml" value="0.2992805755395683" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/activity_notification.xml" value="0.22" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/activity_payment_setting.xml" value="0.18888888888888888" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/activity_pdfuploade.xml" value="0.26962025316455696" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/activity_privacy_policy.xml" value="0.26962025316455696" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/activity_referral.xml" value="0.27692307692307694" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/activity_scan_bar_code.xml" value="0.27692307692307694" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/activity_signup.xml" value="0.27692307692307694" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/activity_splace.xml" value="0.2" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/activity_start.xml" value="0.27692307692307694" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/activity_termand_condition.xml" value="0.18" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/addfund_fragment.xml" value="0.27692307692307694" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/all_transection_list.xml" value="0.2" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/coin_list_item.xml" value="0.27692307692307694" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/deposite_tab.xml" value="0.27692307692307694" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/history_fragment.xml" value="0.22" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/nav_header_main.xml" value="0.2" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/received_fragment.xml" value="0.22" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/send_fragment.xml" value="0.22" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/wallet_fragment.xml" value="0.2" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/wallet_list_item.xml" value="0.67" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/withdrow_fragment.xml" value="0.27692307692307694" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/withdrow_tab.xml" value="0.27692307692307694" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/menu/activity_main_drawer.xml" value="0.33" />
+        <entry key="..\:/Backup/Cryptosoar/app/src/main/res/layout/activity_edit.xml" value="0.27692307692307694" />
+        <entry key="..\:/Backup/Cryptosoar/app/src/main/res/layout/activity_login.xml" value="0.27692307692307694" />
+        <entry key="..\:/Backup/Cryptosoar/app/src/main/res/layout/activity_main.xml" value="0.27692307692307694" />
+        <entry key="..\:/Backup/Cryptosoar/app/src/main/res/layout/activity_signup.xml" value="0.27692307692307694" />
+        <entry key="..\:/Backup/Cryptosoar/app/src/main/res/layout/coin_list_item.xml" value="0.27341772151898736" />
+        <entry key="..\:/Backup/Cryptosoar/app/src/main/res/layout/fragment_bottomsheet_coin.xml" value="0.27341772151898736" />
+        <entry key="..\:/Backup/Cryptosoar/app/src/main/res/layout/profile_fragment.xml" value="0.25" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/bg_botom_round.xml" value="0.2152777777777778" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/bg_botom_round_min.xml" value="0.13518518518518519" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/bg_btn_border.xml" value="0.21481481481481482" />
@@ -18,6 +62,7 @@
         <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/edit_corsor_color_gray.xml" value="0.19814814814814816" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/gradient_history.xml" value="0.21481481481481482" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/ic__wallet.xml" value="0.12083333333333333" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/ic_addfund.xml" value="0.1658119658119658" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/ic_phonee.xml" value="0.13240740740740742" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/ic_sidemenu.xml" value="0.28055555555555556" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/logo_gradiant.xml" value="0.16296296296296298" />

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_10sdp"
+    >
+    <RelativeLayout
+        android:id="@+id/rellayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:src="@drawable/logo">
+
+    </ImageView>
+    <LinearLayout
+        android:id="@+id/linlayout"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:layout_toEndOf="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/name_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:background="@null"
+        android:fontFamily="@font/rubik_medium"
+
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="bold">
+
+    </TextView>
+
+        <TextView
+            android:layout_marginTop="@dimen/_3sdp"
+            android:id="@+id/address_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@null"
+            android:fontFamily="@font/rubik_regular"
+            android:textColor="@color/textcolor"
+            android:textColorHint="@color/textcolor"
+            android:textSize="@dimen/_9sdp"
+            android:textStyle="bold">
+        </TextView>
+
+
+
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/received_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_10sdp"
+
+            android:layout_toStartOf="@+id/copy_txt"
+
+
+            android:background="@null"
+            android:fontFamily="@font/rubik_regular"
+            android:text="Received"
+            android:textColor="#0260FF"
+            android:textColorHint="#0260FF"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold">
+
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/copy_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+
+            android:layout_marginRight="@dimen/_10sdp"
+
+
+            android:background="@null"
+            android:fontFamily="@font/rubik_regular"
+            android:text="Copy"
+            android:textColor="#0260FF"
+            android:textColorHint="#0260FF"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold">
+
+        </TextView>
+    </RelativeLayout>
+    <View
+        android:background="@color/textcolor"
+        android:layout_below="@+id/rellayout"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></View>
+
+
+
+
+</RelativeLayout>

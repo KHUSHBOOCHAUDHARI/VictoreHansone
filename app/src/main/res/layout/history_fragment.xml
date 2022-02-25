@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:background="@color/black"
+        android:background="@color/backgroundcolor"
         android:layout_height="match_parent">
 
         <androidx.appcompat.widget.Toolbar
@@ -34,8 +34,8 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/_10sdp"
                     android:layout_toEndOf="@+id/menu"
-                    android:fontFamily="@font/overpass_regular"
-                    android:text="@string/transaction_history_txt"
+                    android:fontFamily="@font/rubik_medium"
+                    android:text="@string/list_wallet_txt"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_16sdp"></TextView>
 
@@ -77,8 +77,48 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+                <RadioGroup
+                    android:layout_below="@+id/tran_history_txt"
+                    android:layout_centerHorizontal="true"
+
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+                    android:id="@+id/radioGroup">
+
+                    <RadioButton
+
+                        android:buttonTint="@color/colorPrimaryDark"
+                        android:id="@+id/deposit"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="wrap_content"
+                        android:text="  Deposit"
+                        android:checked="true"
+                        android:fontFamily="@font/rubik_medium"
+                        android:layout_marginTop="10dp"
+
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <RadioButton
+
+                        android:layout_marginLeft="@dimen/_60sdp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:buttonTint="@color/colorPrimaryDark"
+                        android:id="@+id/withdraw"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text=" Withdraw"
+                        android:fontFamily="@font/rubik_medium"
+                        android:layout_marginTop="10dp"
+
+
+                        android:textSize="@dimen/_12sdp" />
+                </RadioGroup>
 
                 <TextView
+
                     android:id="@+id/tran_history_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -86,12 +126,12 @@
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/overpass_bold"
                     android:text="@string/all_transaction_history_txt"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="@dimen/_14sdp"></TextView>
 
-            <LinearLayout
+                <LinearLayout
                 android:layout_marginTop="10dp"
-                android:layout_below="@id/tran_history_txt"
+                android:layout_below="@id/radioGroup"
                 android:id="@+id/linearLayout_home_adapter"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -107,6 +147,7 @@
                     android:layout_marginStart="5dp"
                     android:paddingBottom="@dimen/_10sdp"
                     android:layout_marginTop="5dp" />
+
 
 
 
@@ -131,7 +172,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="No Data Found"
+            android:text="Transection is empty"
             android:textColor="@color/headline"
             android:visibility="gone"
             android:textSize="18sp"

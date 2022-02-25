@@ -6,7 +6,7 @@
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="@drawable/background"
     tools:context=".Activity.SignupActivity">
 
 
@@ -29,8 +29,8 @@
 
     <ImageView
         android:layout_gravity="center"
-        android:layout_width="@dimen/_100sdp"
-        android:layout_height="@dimen/_100sdp"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_110sdp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
         android:background="@drawable/logo"></ImageView>
@@ -44,11 +44,11 @@
            android:layout_marginTop="@dimen/_40sdp"
            android:layout_marginRight="@dimen/_15sdp"
 
-           android:fontFamily="@font/overpass_semibold"
+           android:fontFamily="@font/rubik_regular"
            android:gravity="center"
            android:text="@string/createaaccount_txt"
            android:textAlignment="center"
-           android:textColor="@color/white"
+           android:textColor="@color/black"
            android:textSize="@dimen/_16sdp"></TextView>
 
 
@@ -71,7 +71,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:background="@drawable/user"
-            android:backgroundTint="@color/white"></ImageView>
+            android:backgroundTint="@color/textcolor"></ImageView>
 
         <EditText
             android:id="@+id/firstname_edt"
@@ -87,19 +87,20 @@
             android:layout_toEndOf="@+id/firstname_logo"
             android:background="@null"
             android:backgroundTint="@color/transparent"
-            android:fontFamily="@font/overpass_regular"
-            android:hint="@string/firstname_txt"
+            android:fontFamily="@font/rubik_regular"
+            android:hint="@string/enter_user_name"
             android:inputType="textCapSentences"
-            android:paddingTop="5dp"
-            android:paddingBottom="10dp"
+            android:paddingTop="@dimen/_12sdp"
+            android:paddingBottom="@dimen/_12sdp"
 
             android:singleLine="true"
-            android:textColor="@color/white"
-            android:textColorHint="@color/lightwhite"
+            android:textColor="@color/textcolor"
+            android:textColorHint="@color/textcolor"
             android:textCursorDrawable="@drawable/edit_corsor_color_gray"
             android:textSize="@dimen/_12sdp"></EditText>
     </RelativeLayout>
     <RelativeLayout
+        android:visibility="gone"
         android:id="@+id/lastname_layout"
         android:background="@drawable/bg_btn_border_back"
         android:layout_marginLeft="@dimen/_15sdp"
@@ -117,7 +118,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:background="@drawable/user"
-            android:backgroundTint="@color/white"></ImageView>
+            android:backgroundTint="@color/textcolor"></ImageView>
 
         <EditText
             android:id="@+id/lastname_edt"
@@ -132,18 +133,19 @@
             android:background="@null"
             android:backgroundTint="@color/transparent"
             android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-            android:fontFamily="@font/overpass_regular"
+            android:fontFamily="@font/rubik_regular"
             android:hint="@string/lastname_txt"
-            android:paddingTop="5dp"
-            android:paddingBottom="10dp"
+            android:paddingTop="@dimen/_12sdp"
+            android:paddingBottom="@dimen/_12sdp"
             android:singleLine="true"
 
-            android:textColor="@color/white"
-            android:textColorHint="@color/lightwhite"
+            android:textColor="@color/textcolor"
+            android:textColorHint="@color/textcolor"
             android:textCursorDrawable="@drawable/edit_corsor_color_gray"
             android:textSize="@dimen/_12sdp"></EditText>
     </RelativeLayout>
     <RelativeLayout
+        android:visibility="gone"
         android:id="@+id/email_layout"
         android:background="@drawable/bg_btn_border_back"
         android:layout_marginLeft="@dimen/_15sdp"
@@ -161,31 +163,32 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:background="@drawable/emaill"
-            android:backgroundTint="@color/white"></ImageView>
+            android:backgroundTint="@color/textcolor"></ImageView>
 
         <EditText
             android:id="@+id/email_edt"
             android:layout_width="match_parent"
-            android:layout_marginRight="@dimen/_15sdp"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
+            android:layout_marginRight="@dimen/_15sdp"
             android:layout_marginBottom="5dp"
             android:layout_toEndOf="@+id/email_logo"
             android:background="@null"
             android:backgroundTint="@color/transparent"
-            android:fontFamily="@font/overpass_regular"
+            android:fontFamily="@font/rubik_regular"
             android:hint="@string/enter_email_id"
-            android:paddingTop="5dp"
-            android:paddingBottom="10dp"
+            android:paddingTop="@dimen/_12sdp"
+            android:paddingBottom="@dimen/_12sdp"
             android:singleLine="true"
-            android:textColor="@color/white"
-            android:textColorHint="@color/lightwhite"
+            android:textColor="@color/textcolor"
+            android:textColorHint="@color/textcolor"
             android:textCursorDrawable="@drawable/edit_corsor_color_gray"
             android:textSize="@dimen/_12sdp"></EditText>
     </RelativeLayout>
        <RelativeLayout
+           android:visibility="gone"
            android:id="@+id/mobileno_layout"
            android:background="@drawable/bg_btn_border_back"
            android:layout_marginLeft="@dimen/_15sdp"
@@ -203,7 +206,7 @@
                android:layout_centerVertical="true"
                android:layout_marginLeft="10dp"
                android:background="@drawable/ic_phonee"
-               android:backgroundTint="@color/white"></ImageView>
+               android:backgroundTint="@color/textcolor"></ImageView>
 
            <com.hbb20.CountryCodePicker
                android:id="@+id/ccp"
@@ -213,7 +216,7 @@
                android:layout_toEndOf="@+id/mobileno_logo"
                android:padding="2dp"
                app:ccpDialog_showNameCode="false"
-               app:ccp_contentColor="@color/white"
+               app:ccp_contentColor="@color/textcolor"
                app:ccp_countryPreference="us,in"
                app:ccp_hidePhoneCode="true"
                app:ccp_textSize="@dimen/_12sdp" />
@@ -230,15 +233,15 @@
                android:layout_toEndOf="@+id/ccp"
                android:background="@null"
                android:backgroundTint="@color/transparent"
-               android:fontFamily="@font/overpass_regular"
+               android:fontFamily="@font/rubik_regular"
                android:hint="@string/mobile_txt"
                android:inputType="number"
 
                android:paddingTop="5dp"
                android:paddingBottom="10dp"
                android:singleLine="true"
-               android:textColor="@color/white"
-               android:textColorHint="@color/lightwhite"
+               android:textColor="@color/textcolor"
+               android:textColorHint="@color/textcolor"
                android:textCursorDrawable="@drawable/edit_corsor_color_gray"
                android:textSize="@dimen/_12sdp"></EditText>
        </RelativeLayout>
@@ -260,7 +263,7 @@
                android:layout_centerVertical="true"
                android:layout_marginLeft="10dp"
                android:background="@drawable/password"
-               android:backgroundTint="@color/white"></ImageView>
+               android:backgroundTint="@color/textcolor"></ImageView>
            <ImageView
                android:visibility="gone"
                 android:layout_alignParentEnd="true"
@@ -271,7 +274,7 @@
                android:layout_centerVertical="true"
                android:layout_marginLeft="10dp"
                android:background="@drawable/ic_outline_remove_red_eye_24"
-               android:backgroundTint="@color/white"></ImageView>
+               android:backgroundTint="@color/textcolor"></ImageView>
            <ImageView
                android:layout_alignParentEnd="true"
                android:layout_marginRight="@dimen/_10sdp"
@@ -281,7 +284,7 @@
                android:layout_centerVertical="true"
                android:layout_marginLeft="10dp"
                android:background="@drawable/ic_outline_visibility_off_24"
-               android:backgroundTint="@color/white"></ImageView>
+               android:backgroundTint="@color/textcolor"></ImageView>
 
            <EditText
 
@@ -291,20 +294,20 @@
                android:layout_centerVertical="true"
                android:layout_marginLeft="10dp"
                android:layout_marginTop="5dp"
-                android:maxLength="8"
                android:layout_marginRight="@dimen/_40sdp"
                android:layout_marginBottom="5dp"
                android:layout_toEndOf="@+id/password_logo"
                android:background="@null"
                android:backgroundTint="@color/transparent"
-               android:fontFamily="@font/overpass_regular"
+               android:fontFamily="@font/rubik_regular"
                android:hint="@string/enter_password_txt"
                android:inputType="textPassword"
-               android:paddingTop="5dp"
-               android:paddingBottom="10dp"
+               android:maxLength="8"
+               android:paddingTop="@dimen/_12sdp"
+               android:paddingBottom="@dimen/_12sdp"
                android:singleLine="true"
-               android:textColor="@color/white"
-               android:textColorHint="@color/lightwhite"
+               android:textColor="@color/textcolor"
+               android:textColorHint="@color/textcolor"
                android:textCursorDrawable="@drawable/edit_corsor_color_gray"
                android:textSize="@dimen/_12sdp"></EditText>
        </RelativeLayout>
@@ -324,7 +327,7 @@
 
 
     <RelativeLayout
-        android:id="@+id/refralcode_layout"
+        android:id="@+id/confiram_layout"
         android:background="@drawable/bg_btn_border_back"
         android:layout_marginLeft="@dimen/_15sdp"
         android:layout_marginRight="@dimen/_15sdp"
@@ -335,16 +338,16 @@
 
         <ImageView
 
-            android:id="@+id/refralcode_logo"
+            android:id="@+id/confiram_logo"
             android:layout_width="@dimen/_20sdp"
             android:layout_height="@dimen/_20sdp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:background="@drawable/password"
-            android:backgroundTint="@color/white"></ImageView>
+            android:backgroundTint="@color/textcolor"></ImageView>
 
         <EditText
-            android:id="@+id/refralcode_edt"
+            android:id="@+id/confiram_edt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -352,17 +355,18 @@
             android:layout_marginTop="5dp"
             android:layout_marginRight="@dimen/_15sdp"
             android:layout_marginBottom="5dp"
-            android:layout_toEndOf="@+id/refralcode_logo"
+            android:layout_toEndOf="@+id/confiram_logo"
             android:background="@null"
             android:backgroundTint="@color/transparent"
-            android:fontFamily="@font/overpass_regular"
-            android:hint="@string/referalcode_txt"
-            android:inputType="number"
-            android:paddingTop="5dp"
-            android:paddingBottom="10dp"
+            android:fontFamily="@font/rubik_regular"
+            android:hint="@string/enter_confiram_txt"
+            android:inputType="textPassword"
+            android:maxLength="8"
+            android:paddingTop="@dimen/_12sdp"
+            android:paddingBottom="@dimen/_12sdp"
             android:singleLine="true"
-            android:textColor="@color/white"
-            android:textColorHint="@color/lightwhite"
+            android:textColor="@color/textcolor"
+            android:textColorHint="@color/textcolor"
             android:textCursorDrawable="@drawable/edit_corsor_color_gray"
             android:textSize="@dimen/_12sdp"></EditText>
     </RelativeLayout>
@@ -373,19 +377,19 @@
         android:id="@+id/next_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/_7sdp"
-        android:paddingBottom="@dimen/_7sdp"
+        android:paddingTop="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_12sdp"
         android:layout_above="@+id/donthave_layout"
         android:layout_marginLeft="@dimen/_15sdp"
         android:layout_marginRight="@dimen/_15sdp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/gradient_history"
-        android:fontFamily="@font/overpass_regular"
+        android:fontFamily="@font/rubik_medium"
         android:gravity="center"
-        android:text="@string/next_txt"
+        android:text="@string/register_now"
         android:textAlignment="center"
-
-        android:textColor="@color/black"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:textColor="@color/white"
         android:textSize="18dp"></TextView>
     <LinearLayout
         android:layout_gravity="center"
@@ -397,9 +401,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <TextView
-            android:fontFamily="@font/overpass_light"
+            android:fontFamily="@font/rubik_regular"
             android:id="@+id/signuptag_txt"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="@dimen/_12sdp"
             android:text="@string/already_txt"
             android:layout_width="wrap_content"
@@ -408,10 +412,10 @@
         <TextView
             android:layout_marginLeft="5dp"
             android:id="@+id/login_txt"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="@dimen/_12sdp"
             android:text="@string/login_now_text"
-            android:fontFamily="@font/overpass_bold"
+            android:fontFamily="@font/rubik_bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             ></TextView>

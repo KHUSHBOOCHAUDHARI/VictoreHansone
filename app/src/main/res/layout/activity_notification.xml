@@ -2,14 +2,14 @@
 <layout xmlns:app="http://schemas.android.com/apk/res-auto">
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:background="@color/black"
+        android:background="@color/backgroundcolor"
         android:layout_height="match_parent">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbarlyt"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_80sdp"
-            android:background="@drawable/bg_botom_round">
+            android:background="@drawable/ic_rectangle_6188">
             <RelativeLayout
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_width="match_parent"

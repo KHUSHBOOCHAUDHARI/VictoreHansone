@@ -1,49 +1,42 @@
 {
   "project_info": {
-    "project_number": "627141515643",
-    "project_id": "reward-system-9bce2",
-    "storage_bucket": "reward-system-9bce2.appspot.com"
+    "project_number": "929761520463",
+    "project_id": "agrocoin-93fc0",
+    "storage_bucket": "agrocoin-93fc0.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:627141515643:android:a434f7d3ae0ca68bbd45de",
+        "mobilesdk_app_id": "1:929761520463:android:027f8fdf9ba037995eb33a",
         "android_client_info": {
-          "package_name": "com.business.cryptosoar"
+          "package_name": "com.business.agrocoin"
         }
       },
       "oauth_client": [
         {
-          "client_id": "627141515643-q68moo3q5rtlpnvalreal558qunub202.apps.googleusercontent.com",
+          "client_id": "929761520463-jg9oknf2a3su97hksthgttu8m5tq6568.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.business.cryptosoar",
+            "package_name": "com.business.agrocoin",
             "certificate_hash": "7753a9b196f3bdca6359aff443ae723b6e148639"
           }
         },
         {
-          "client_id": "627141515643-6u2f593mqh25mroejcab5ksoccuqppmo.apps.googleusercontent.com",
+          "client_id": "929761520463-qcktuk1a0jsku2t6ns5taa9vs26g35cn.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC0E2_yGkwUodMM7GK-zuDTpeFxJneKCqg"
+          "current_key": "AIzaSyDHZfcSsWwIBDwBhNfZp3fl7Qkx-dLos6E"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "627141515643-6u2f593mqh25mroejcab5ksoccuqppmo.apps.googleusercontent.com",
+              "client_id": "929761520463-qcktuk1a0jsku2t6ns5taa9vs26g35cn.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "627141515643-8mgb5bf777r7eomgo0qu1h806ku28s0p.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.RewardApp"
-              }
             }
           ]
         }
