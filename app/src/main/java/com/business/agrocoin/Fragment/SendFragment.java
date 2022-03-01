@@ -1,13 +1,18 @@
 package com.business.agrocoin.Fragment;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Html;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
@@ -26,11 +31,17 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.business.agrocoin.databinding.SendFragmentBinding;
+
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+
 import cz.msebera.android.httpclient.Header;
 
 public class SendFragment  extends Fragment {
     SendFragmentBinding binding;
     Method method;
+
+    AlertDialog.Builder builder;
     public SendFragment() {
         // Required empty public constructor
     }
@@ -40,7 +51,7 @@ public class SendFragment  extends Fragment {
         binding = DataBindingUtil.inflate(inflater, R.layout.send_fragment, container, false);
         MainActivity.txt_toolbartitle.setText("Send Currency");
         MainActivity.selctedrecy.setVisibility(View.GONE);
-
+        builder = new AlertDialog.Builder(getActivity());
         method=new Method(getActivity());
         String terms = "<font color='#A7A7A7'>By proceeding you agree to the </font><font color='#004CEF'>Terms & Conditions</font>";
         binding.termandconditionTxt.setText(Html.fromHtml(terms), TextView.BufferType.SPANNABLE);
@@ -53,6 +64,11 @@ public class SendFragment  extends Fragment {
                 getActivity().overridePendingTransition(R.anim.right_enter, R.anim.left_out);
             }
         });
+
+
+
+
+
         binding.saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -115,27 +131,33 @@ public class SendFragment  extends Fragment {
                     JSONObject jsonObject = new JSONObject(res);
                     String status = jsonObject.getString("statusCode");
                     if (status.equalsIgnoreCase("200")) {
-                        JSONArray jsonArray = jsonObject.getJSONArray("result");
-                        for (int i = 0; i < jsonArray.length(); i++) {
-                            JSONObject jsonObject1 = jsonArray.getJSONObject(i);
- //                            String id = jsonObject1.getString("id");
-//                            String user_id = jsonObject1.getString("user_id");
-//                            String crypto_type_id = jsonObject1.getString("crypto_type_id");
-//                            String crypto_protocol_id = jsonObject1.getString("crypto_protocol_id");
-//                            String crypto_address = jsonObject1.getString("crypto_address");
-//                            String crypto_label = jsonObject1.getString("crypto_label");
-//                            method.editor.putString(method.Address_Id, id);
-//                            method.editor.putString(method.Id, user_id);
-//                            method.editor.putBoolean(method.pref_login, true);
-//                            method.editor.commit();
-//                            String message = jsonObject.getString("message");
-//                            Toast.makeText(AddAddressActivity.this, message.toString(), Toast.LENGTH_SHORT).show();
-                          //  onBackPressed();
+                        String result = jsonObject.getString("result");
 
-                           // overridePendingTransition(R.anim.right_enter, R.anim.left_out);
-                          //  finish();
+                        Float round_walletamt = Float.parseFloat(method.pref.getString(method.account_balance,null)) - Float.parseFloat(binding.amountTxt.getText().toString());
 
-                        }
+
+                        method.editor.putString(method.account_balance, String.valueOf(round_walletamt));
+                        method.editor.commit();
+                        Toast.makeText(getActivity(), jsonObject.getString("statusMsg").toString(), Toast.LENGTH_SHORT).show();
+
+                       // builder.setTitle(jsonObject.getString("statusMsg"));
+
+                        builder.setMessage(result.toString())
+                                .setCancelable(false)
+                                .setPositiveButton(Html.fromHtml("<font color='#029E9A'>Ok</font>"), new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        Intent intent=new Intent(getActivity(),MainActivity.class);
+                                        startActivity(intent);
+                                        getActivity().overridePendingTransition(R.anim.right_enter,R.anim.left_out);
+                                        getActivity().finish();
+
+                                    }
+
+                                });
+
+                        AlertDialog alert = builder.create();
+                        alert.setTitle(Html.fromHtml("<font color='#029E9A'>Withdrawal Successfully</font>"));
+                        alert.show();
 
 
                     } else {

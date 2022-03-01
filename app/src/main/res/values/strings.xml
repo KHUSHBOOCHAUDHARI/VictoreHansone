@@ -35,7 +35,7 @@
     <string name="interested_paid_txt">Total Interest Paid</string>
     <!--    <string name="invite_your_friend_txt">Invite your friends to join & get up to 1% of the total invest done by referral</string>-->
 
-    <string name="transaction_history_txt">Transection History</string>
+    <string name="transaction_history_txt">Transaction History</string>
     <string name="list_wallet_txt">List Of Wallet</string>
     <string name="all_transaction_history_txt">Showing All Transactions</string>
     <string name="no_transaction_history_txt">No Transaction yet made to display.</string>
@@ -68,6 +68,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="transection_history">getTransactionList?</string>
+    <string name="update_balnce">getBalance?</string>
     <string name="change_password">change_password</string>
     <string name="contact_us">contactus</string>
     <string name="edit_profile">profile_update</string>

@@ -33,11 +33,14 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.business.agrocoin.Adapter.TransactionHistoryAdapter;
 import com.business.agrocoin.Fragment.HistoryFragment;
 import com.business.agrocoin.Fragment.ReceivedFragment;
 import com.business.agrocoin.Fragment.SendFragment;
 import com.business.agrocoin.Fragment.WalletFragment;
 
+import com.business.agrocoin.Model.TransactionModel;
+import com.business.agrocoin.Util.Apis;
 import com.business.agrocoin.Util.Method;
 
 import com.google.android.material.navigation.NavigationView;
@@ -46,6 +49,18 @@ import com.google.firebase.iid.FirebaseInstanceId;
 
 import com.business.agrocoin.R;
 import com.business.agrocoin.databinding.ActivityMainBinding;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+import java.util.Collections;
+
+import cz.msebera.android.httpclient.Header;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -72,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     String account_balance;
     public static ImageView filter;
     boolean doubleBackToExitPressedOnce = false;
-
+    Handler mHandler = new Handler();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -131,7 +146,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Shader.TileMode tile_mode = Shader.TileMode.MIRROR; // or TileMode.REPEAT;
         LinearGradient lin_grad = new LinearGradient(0, 0, 0, 50, color, position, tile_mode);
         Shader shader_gradient = lin_grad;
-        account_balance_txt.setText("$" + method.pref.getString(method.account_balance, null));
+
+        String mainbalnace=method.pref.getString(method.account_balance,null);
+        DecimalFormat dtime = new DecimalFormat("0.00");
+        dtime.setRoundingMode(RoundingMode.DOWN);
+        account_balance_txt.setText("AGRO " + dtime.format(Double.parseDouble(mainbalnace.toString())));
 
         setSupportActionBar(toolbar);
         FirebaseApp.initializeApp(MainActivity.this);
@@ -171,7 +190,28 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
 
         });
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                // TODO Auto-generated method stub
+                while (true) {
+                    try {
+                        Thread.sleep(10000);
+                        mHandler.post(new Runnable() {
 
+                            @Override
+                            public void run() {
+                                  UpdateBalance(method.pref.getString(method.Id,null));
+                                // TODO Auto-generated method stub
+                                // Write your code here to update the UI.
+                            }
+                        });
+                    } catch (Exception e) {
+                        // TODO: handle exception
+                    }
+                }
+            }
+        }).start();
 
         final View headerLayout = navigationView.inflateHeaderView(R.layout.nav_header_main);
         name = headerLayout.findViewById(R.id.name);
@@ -179,6 +219,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         balance = headerLayout.findViewById(R.id.balance);
         name.setText(method.pref.getString(method.UserName.toString(), null));
 
+        balance.setText("Account Balance: " + account_balance_txt.getText().toString());
 
         user_image = headerLayout.findViewById(R.id.imageView_Userimage);
         imageView_edit_profile.setOnClickListener(new View.OnClickListener() {
@@ -295,8 +336,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         WalletFragment.TYTPE.equals("2");
     }
 
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+    @Override public boolean onNavigationItemSelected(MenuItem item) {
         // Handle bottom_navigation view item clicks here.
         //Checking if the item is in checked state or not, if not make it in checked state
         if (item.isChecked())
@@ -384,8 +424,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 return true;
         }
     }
-
-
     public void fullscreen() {
 
         if (Build.VERSION.SDK_INT >= 19 && Build.VERSION.SDK_INT < 21) {
@@ -401,7 +439,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
     }
-
     public static void setWindowFlag(Activity activity, final int bits, boolean on) {
         Window win = activity.getWindow();
         WindowManager.LayoutParams winParams = win.getAttributes();
@@ -412,14 +449,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         win.setAttributes(winParams);
     }
-
-
-
-
-
-
-    @Override
-    public void onBackPressed() {
+    @Override public void onBackPressed() {
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -445,6 +475,70 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
 
         }
+    }
+
+
+    private void UpdateBalance(String UserId) {
+
+
+        AsyncHttpClient client = new AsyncHttpClient();
+        String url = Apis.ROOT_URLL + getString(R.string.update_balnce)+"userId="+UserId;
+        Log.e("Url------->", url);
+
+        client.get(url,new AsyncHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                Log.d("Response", new String(responseBody));
+                String res = new String(responseBody);
+                Log.e("Urlgfg------->", res.toString());
+                try {
+                    JSONObject jsonObject = new JSONObject(res);
+                    String status = jsonObject.getString("statusCode");
+                    if (status.equalsIgnoreCase("200")) {
+                        String result = jsonObject.getString("result");
+
+                        Log.e("MainAccountBalance",result.toString());
+                        method.editor.putString(method.account_balance, result);
+                        method.editor.commit();
+                        String mainbalnace=method.pref.getString(method.account_balance,null);
+                        DecimalFormat dtime = new DecimalFormat("0.00");
+                        dtime.setRoundingMode(RoundingMode.DOWN);
+                        account_balance_txt.setText("AGRO " + dtime.format(Double.parseDouble(mainbalnace.toString())));
+
+                    }
+
+
+
+
+
+
+                     else {
+                        binding.progressBar.setVisibility(View.GONE);
+                        Toast.makeText(MainActivity.this, "kkkkkkkkkk", Toast.LENGTH_SHORT).show();
+
+                        String message = jsonObject.getString("statusMsg");
+                        // binding.textViewCategory.setText(message);
+                        //binding.textViewCategory.setVisibility(View.VISIBLE);
+                    }
+
+
+
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+
+
+                }
+            }
+
+
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+
+
+            }
+        });
     }
 }
 

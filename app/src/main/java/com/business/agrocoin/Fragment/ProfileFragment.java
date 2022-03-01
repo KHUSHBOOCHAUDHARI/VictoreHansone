@@ -38,7 +38,7 @@ public class ProfileFragment extends Fragment {
         builder = new AlertDialog.Builder(getActivity());
         MainActivity.txt_toolbartitle.setText(getResources().getString(R.string.profile_setting_txt));
         MainActivity.RelativeLayout.setVisibility(View.GONE);
-        MainActivity.filter.setVisibility(View.GONE);
+        MainActivity.filter.setVisibility(View.VISIBLE);
         method = new Method(getActivity());
 
 

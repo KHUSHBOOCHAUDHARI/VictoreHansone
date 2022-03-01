@@ -160,6 +160,10 @@ public class ScanBarCodeActivity extends AppCompatActivity {
                 ADDRESS_SCANED=intentData.toString();
                 copyToClipBoard(intentData);
                 onBackPressed();
+                finish();
+
+
+
             }
         });
     }

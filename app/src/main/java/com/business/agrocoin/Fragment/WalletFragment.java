@@ -35,13 +35,13 @@ import java.util.List;
 import cz.msebera.android.httpclient.Header;
 
 public class WalletFragment extends Fragment {
-    WalletFragmentBinding binding;
-    Method method;
     public static String user_id;
     public static RecyclerView filterRecyclerview, tansectionRecyclerview;
     public static ProgressBar progressBar;
     public static TextView nodata, accrued_txt, toalinterest_txt, account_balance_txt;
     public static String TYTPE = "";
+    WalletFragmentBinding binding;
+    Method method;
     private List<WalletModel> walletModels;
     private WalletAdaptor walletAdaptor;
 
@@ -56,7 +56,7 @@ public class WalletFragment extends Fragment {
         method = new Method(getActivity());
         MainActivity.txt_toolbartitle.setText(getResources().getString(R.string.welcome_dashboard_txt));
         MainActivity.selctedrecy.setVisibility(View.VISIBLE);
-        MainActivity.filter.setVisibility(View.GONE);
+        MainActivity.filter.setVisibility(View.VISIBLE);
         filterRecyclerview = binding.filterRecyclerview;
         tansectionRecyclerview = binding.tansectionRecyclerview;
         progressBar = binding.progressBar;
@@ -106,6 +106,7 @@ public class WalletFragment extends Fragment {
         binding.tansectionRecyclerview.setFocusable(false);
         return binding.getRoot();
     }
+
     private void data(String UserId) {
         binding.progressBar.setVisibility(View.VISIBLE);
         AsyncHttpClient client = new AsyncHttpClient();

@@ -172,7 +172,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="Transection is empty"
+            android:text="Transaction is empty"
             android:textColor="@color/headline"
             android:visibility="gone"
             android:textSize="18sp"

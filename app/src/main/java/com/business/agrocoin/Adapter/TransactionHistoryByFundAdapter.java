@@ -66,7 +66,7 @@ public class TransactionHistoryByFundAdapter extends RecyclerView.Adapter<Transa
     public void onBindViewHolder(ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         final TransactionModel myListData = listdata.get(position);
         holder.title.setText(listdata.get(position).getTitle());
-        holder.totalamount_txt.setText("$" + "350000");
+        holder.totalamount_txt.setText("AGRO " + "350000");
         holder.date_txt.setText(listdata.get(position).getDate());
         holder.status.setText(listdata.get(position).getStatus());
 
@@ -75,7 +75,7 @@ public class TransactionHistoryByFundAdapter extends RecyclerView.Adapter<Transa
             holder.totalamount_lable.setText("Month");
             holder.totalamount_txt.setText(date_format("350000"));
             holder.date_lable.setText("Interest Amount");
-            holder.date_txt.setText("$" + listdata.get(position).getTotal_amt());
+            holder.date_txt.setText("AGRO " + listdata.get(position).getTotal_amt());
             holder.planelyt.setVisibility(View.GONE);
 
         } else if (listdata.get(position).getTransaction_type().equalsIgnoreCase("addfund")) {
@@ -137,7 +137,7 @@ public class TransactionHistoryByFundAdapter extends RecyclerView.Adapter<Transa
                     progressBardialog.setVisibility(View.VISIBLE);
                     created_text.setText(date_formatnew(listdata.get(position).getDate()));
                     paymentop_tag.setText(listdata.get(position).getTitle());
-                    totlaamount_text.setText("$" + listdata.get(position).getTotal_amt());
+                    totlaamount_text.setText("AGRO " + listdata.get(position).getTotal_amt());
                     totlaamount_tag.setText("Interest Amount");
                     cryptoaddress_tag.setVisibility(View.GONE);
                     cryptotype_tag.setVisibility(View.GONE);
@@ -253,7 +253,7 @@ public class TransactionHistoryByFundAdapter extends RecyclerView.Adapter<Transa
                                         if (payment_method_name.equals("Bank Transfer")) {
                                             paymentop_text.setText(payment_method_name);
                                             created_text.setText(date_formatnew(created_date));
-                                            totlaamount_text.setText("$" + fund_amount);
+                                            totlaamount_text.setText("AGRO " + fund_amount);
                                             cryptotype_text.setText(admin_bank_account_number);
                                             cryptotype_tag.setText("Account Number");
                                             protocol_text.setText(admin_bank_ifsc_code);
@@ -272,7 +272,7 @@ public class TransactionHistoryByFundAdapter extends RecyclerView.Adapter<Transa
                                         } else if (payment_method_name.equals("Cash")) {
                                             paymentop_text.setText(payment_method_name);
                                             created_text.setText(date_formatnew(created_date));
-                                            totlaamount_text.setText("$" + fund_amount);
+                                            totlaamount_text.setText("AGRO " + fund_amount);
                                             cryptotype_text.setText(user_contact_person_name);
                                             cryptotype_tag.setText("Full Name");
                                             protocol_text.setText(user_contact_number);
@@ -290,7 +290,7 @@ public class TransactionHistoryByFundAdapter extends RecyclerView.Adapter<Transa
                                         } else {
                                             paymentop_text.setText(payment_method_name);
                                             created_text.setText(date_formatnew(created_date));
-                                            totlaamount_text.setText("$" + fund_amount);
+                                            totlaamount_text.setText("AGRO " + fund_amount);
                                             cryptotype_text.setText(crypto_type_name);
                                             protocol_text.setText(protocol_name);
                                             cryptoaddress_text.setText(admin_protocol_address);
@@ -374,7 +374,7 @@ public class TransactionHistoryByFundAdapter extends RecyclerView.Adapter<Transa
                     progressBardialog.setVisibility(View.VISIBLE);
                     created_text.setText(date_formatnew(listdata.get(position).getDate()));
                     paymentop_tag.setText(listdata.get(position).getTitle());
-                    totlaamount_text.setText("$" + listdata.get(position).getTotal_amt());
+                    totlaamount_text.setText("AGRO " + listdata.get(position).getTotal_amt());
                     totlaamount_tag.setText("Referral Amount");
                     cryptoaddress_tag.setVisibility(View.GONE);
                     cryptotype_tag.setVisibility(View.GONE);
@@ -487,7 +487,7 @@ public class TransactionHistoryByFundAdapter extends RecyclerView.Adapter<Transa
                                         if (payment_method_name.equals("Bank Transfer")) {
                                             paymentop_text.setText(payment_method_name);
                                             created_text.setText(date_formatnew(created_date));
-                                            totlaamount_text.setText("$" + fund_amount);
+                                            totlaamount_text.setText("AGRO " + fund_amount);
                                             cryptotype_text.setText(admin_bank_account_number);
                                             cryptotype_tag.setText("Account Number");
                                             protocol_text.setText(admin_bank_ifsc_code);
@@ -505,7 +505,7 @@ public class TransactionHistoryByFundAdapter extends RecyclerView.Adapter<Transa
                                         } else if (payment_method_name.equals("Cash")) {
                                             paymentop_text.setText(payment_method_name);
                                             created_text.setText(date_formatnew(created_date));
-                                            totlaamount_text.setText("$" + fund_amount);
+                                            totlaamount_text.setText("AGRO " + fund_amount);
                                             cryptotype_text.setText(admin_contact_person_name);
                                             cryptotype_tag.setText("Full Name");
                                             protocol_text.setText(admin_contact_number);
@@ -523,7 +523,7 @@ public class TransactionHistoryByFundAdapter extends RecyclerView.Adapter<Transa
                                         } else {
                                             paymentop_text.setText(payment_method_name);
                                             created_text.setText(date_formatnew(created_date));
-                                            totlaamount_text.setText("$" + fund_amount);
+                                            totlaamount_text.setText("AGRO " + fund_amount);
                                             cryptotype_text.setText(crypto_type_name);
                                             protocol_text.setText(protocol_name);
                                             bankname.setText("");
@@ -704,7 +704,7 @@ public class TransactionHistoryByFundAdapter extends RecyclerView.Adapter<Transa
                             String user_state_city = jsonObject1.getString("user_state_city");
                             paymentop_text.setText(payment_method_name);
                             created_text.setText(date_formatnew(created_date));
-                            totlaamount_text.setText("$" + fund_amount);
+                            totlaamount_text.setText("AGRO " + fund_amount);
                             cryptotype_text.setText(crypto_type_name);
                             protocol_text.setText(protocol_name);
                             cryptoaddress_text.setText(admin_protocol_address);

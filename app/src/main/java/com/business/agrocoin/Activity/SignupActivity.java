@@ -47,13 +47,13 @@ public class SignupActivity extends AppCompatActivity {
     public static final String mypreference = "mypref";
     private static SharedPreferences pref;
     private static SharedPreferences.Editor editor;
-    ProgressBar progressBardialog;
+
     public String regId;
-    String Code;
-    String otp;
+
     Context context;
     FirebaseAuth auth;
     private boolean is_profile;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -144,7 +144,7 @@ public class SignupActivity extends AppCompatActivity {
         binding.confiramEdt.setError(null);
         if (FirstName.isEmpty() || FirstName.equalsIgnoreCase("")) {
             binding.firstnameEdt.requestFocus();
-            binding.firstnameEdt.setError(getResources().getString(R.string.firstname_txt));
+            binding.firstnameEdt.setError(getResources().getString(R.string.enter_user_name));
             binding.passwordValidTxt.setVisibility(View.GONE);
         }
 //        else if (LastName.isEmpty() || LastName.equalsIgnoreCase("")) {
@@ -163,43 +163,35 @@ public class SignupActivity extends AppCompatActivity {
 //                binding.emailEdt.setError(getResources().getString(R.string.enter_validemail_id));
 //                binding.passwordValidTxt.setVisibility(View.GONE);
 //        }
-        else if (Password.equals("") || Password.isEmpty())
-        {
+        else if (Password.equals("") || Password.isEmpty()) {
             binding.passwordEdt.requestFocus();
             binding.passwordEdt.setError(getResources().getString(R.string.enter_password_txt));
             binding.passwordValidTxt.setVisibility(View.GONE);
-        }
-        else if (!isValidPassword(Password)) {
+        } else if (!isValidPassword(Password)) {
             binding.passwordEdt.requestFocus();
             binding.passwordEdt.setError(getResources().getString(R.string.strong_password_validation));
             binding.passwordValidTxt.setVisibility(View.VISIBLE);
-        }
-        else if (Confiram.equals("") || Confiram.isEmpty()) {
+        } else if (Confiram.equals("") || Confiram.isEmpty()) {
             binding.confiramEdt.requestFocus();
             binding.confiramEdt.setError("Plsease enter confiram password");
         } else if (!Confiram.equals(Password)) {
             binding.confiramEdt.requestFocus();
             binding.confiramEdt.setError("Password do not match");
-        }
-
-            else{
-                if (method.isNetworkAvailable(SignupActivity.this)) {
-                    registration(FirstName,Password);
-                } else {
-                    method.alertBox(getResources().getString(R.string.internet_connection));
-                }
+        } else {
+            if (method.isNetworkAvailable(SignupActivity.this)) {
+                registration(FirstName, Password);
+            } else {
+                method.alertBox(getResources().getString(R.string.internet_connection));
             }
+        }
     }
 
 
-
-
-
-    private void registration(String FirstName,String Password) {
+    private void registration(String FirstName, String Password) {
 
         binding.progressBar.setVisibility(View.VISIBLE);
         AsyncHttpClient client = new AsyncHttpClient();
-        String url = Apis.ROOT_URLL + getString(R.string.register_user)+"username="+FirstName+"&password="+Password;
+        String url = Apis.ROOT_URLL + getString(R.string.register_user) + "username=" + FirstName + "&password=" + Password;
         Log.e("Url------->", url);
         client.post(url, new AsyncHttpResponseHandler() {
             @Override
@@ -216,14 +208,10 @@ public class SignupActivity extends AppCompatActivity {
                             overridePendingTransition(R.anim.right_enter, R.anim.left_out);
 
 
-
-                        }
-                        else if (status.equalsIgnoreCase("5001"))
-                        {
+                        } else if (status.equalsIgnoreCase("5001")) {
                             String Message = jsonObject.getString("statusMsg");
                             method.alertBox(Message);
-                        }
-                        else {
+                        } else {
                             binding.progressBar.setVisibility(View.GONE);
                             String Message = jsonObject.getString("statusMsg");
                             method.alertBox(Message.toString());
@@ -245,8 +233,6 @@ public class SignupActivity extends AppCompatActivity {
 
         });
     }
-
-
 
 
     public void fullscreen() {
@@ -275,7 +261,6 @@ public class SignupActivity extends AppCompatActivity {
         }
         win.setAttributes(winParams);
     }
-
 
 
     public static InputFilter getEditTextFilter() {
@@ -315,18 +300,18 @@ public class SignupActivity extends AppCompatActivity {
     }
 
 
-        //Valid Password
-        public boolean isValidPassword(final String password) {
+    //Valid Password
+    public boolean isValidPassword(final String password) {
 
-            Pattern pattern;
-            Matcher matcher;
+        Pattern pattern;
+        Matcher matcher;
 
-            final String PASSWORD_PATTERN = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$";
+        final String PASSWORD_PATTERN = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$";
 
-            pattern = Pattern.compile(PASSWORD_PATTERN);
-            matcher = pattern.matcher(password);
+        pattern = Pattern.compile(PASSWORD_PATTERN);
+        matcher = pattern.matcher(password);
 
-            return matcher.matches();
+        return matcher.matches();
 
-        }
+    }
 }

@@ -8,9 +8,10 @@
         <!-- upload_video-->
         <item
             android:id="@+id/wallet"
-            android:title="@string/dashboard_txt"
+            android:title="@string/wallet_txt"
             app:iconTint="@drawable/selector"
             />
+
         <item
             android:id="@+id/transection"
             android:title="@string/history_txt"

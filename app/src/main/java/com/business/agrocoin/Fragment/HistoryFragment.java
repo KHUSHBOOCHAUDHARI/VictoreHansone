@@ -27,6 +27,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import cz.msebera.android.httpclient.Header;
@@ -57,15 +60,17 @@ public class HistoryFragment extends Fragment {
 
         binding.deposit.isChecked();
         transactionModels = new ArrayList<>();
-        MainActivity.filter.setVisibility(View.GONE);
+        MainActivity.filter.setVisibility(View.VISIBLE);
         binding.tansectionRecyclerview.setNestedScrollingEnabled(false);
         binding.tansectionRecyclerview.setHasFixedSize(false);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
+
         binding.tansectionRecyclerview.setLayoutManager(layoutManager);
         binding.tansectionRecyclerview.setFocusable(false);
 
         if (Method.isNetworkAvailable(getActivity())) {
             TrasectionHistoryPage(method.pref.getString(method.Id, null),"DEPOSIT");
+          //  Collections.reverse(transactionModels);
         } else {
             method.alertBox(getResources().getString(R.string.internet_connection));
             binding.progressBar.setVisibility(View.GONE);
@@ -102,11 +107,13 @@ public class HistoryFragment extends Fragment {
                 binding.tansectionRecyclerview.setNestedScrollingEnabled(false);
                 binding.tansectionRecyclerview.setHasFixedSize(false);
                 LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
+
                 binding.tansectionRecyclerview.setLayoutManager(layoutManager);
                 binding.tansectionRecyclerview.setFocusable(false);
 
                 if (Method.isNetworkAvailable(getActivity())) {
                     TrasectionHistoryPage(method.pref.getString(method.Id, null),"DEPOSIT");
+                   // Collections.reverse(transactionModels);
                 } else {
                     method.alertBox(getResources().getString(R.string.internet_connection));
                     binding.progressBar.setVisibility(View.GONE);
@@ -120,11 +127,13 @@ public class HistoryFragment extends Fragment {
                     binding.tansectionRecyclerview.setNestedScrollingEnabled(false);
                 binding.tansectionRecyclerview.setHasFixedSize(false);
                 LinearLayoutManager layoutManagerr = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
+
                 binding.tansectionRecyclerview.setLayoutManager(layoutManagerr);
                 binding.tansectionRecyclerview.setFocusable(false);
 
                 if (Method.isNetworkAvailable(getActivity())) {
                     TrasectionHistoryPage(method.pref.getString(method.Id, null),"WITHDRAW");
+
                 } else {
                     method.alertBox(getResources().getString(R.string.internet_connection));
                     binding.progressBar.setVisibility(View.GONE);
@@ -137,7 +146,8 @@ public class HistoryFragment extends Fragment {
     }
 
     private void TrasectionHistoryPage(String UserId, String TransactionType) {
-
+        transactionModels.clear();
+             binding.textViewCategory.setVisibility(View.GONE);
             binding.progressBar.setVisibility(View.VISIBLE);
             AsyncHttpClient client = new AsyncHttpClient();
         String url = Apis.ROOT_URLL + getString(R.string.transection_history)+"userId="+UserId+"&transactionType="+TransactionType;
@@ -169,6 +179,7 @@ public class HistoryFragment extends Fragment {
 
                                 if (transactionModels.size() != 0) {
                                     binding.progressBar.setVisibility(View.GONE);
+                                    Collections.reverse(transactionModels);
                                     TransactionHistoryAdapter = new TransactionHistoryAdapter(getActivity(), transactionModels);
                                     binding.tansectionRecyclerview.setAdapter(TransactionHistoryAdapter);
                                     binding.textViewCategory.setVisibility(View.GONE);

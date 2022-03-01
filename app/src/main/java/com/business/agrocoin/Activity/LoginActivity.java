@@ -11,6 +11,7 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.Html;
 import android.text.InputType;
 import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
@@ -71,7 +72,8 @@ public class LoginActivity extends AppCompatActivity {
         context = LoginActivity.this;
         regId = pref.getString("regId", null);
         auth = FirebaseAuth.getInstance();
-        String udata = "Signup Now";
+        String udata = "Sign Up";
+        binding.signuptagTxt.setText(Html.fromHtml("Don't have account?"));
         SpannableString content = new SpannableString(udata);
         content.setSpan(new UnderlineSpan(), 0, udata.length(), 0);
         binding.signupTxt.setText(content);
