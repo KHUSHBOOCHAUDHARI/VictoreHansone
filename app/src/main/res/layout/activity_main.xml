@@ -4,37 +4,40 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 <androidx.drawerlayout.widget.DrawerLayout
     android:id="@+id/drawer_layout"
-    android:background="@color/backgroundcolor"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:openDrawer="start">
 
    <RelativeLayout
-       android:background="@color/backgroundcolor"
+       android:background="@color/white"
        android:layout_width="match_parent"
        android:layout_height="match_parent">
 
       <androidx.appcompat.widget.Toolbar
+
           android:id="@+id/toolbar_main"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
+          android:background="@color/black"
+          android:paddingTop="@dimen/_30sdp"
 
-          android:background="@drawable/ic_rectangle_6188"
           android:theme="@style/AppTheme.AppBarOverlay"
           app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
          <LinearLayout
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             android:layout_marginTop="@dimen/_40sdp"
              android:layout_marginBottom="@dimen/_10sdp"
-             android:orientation="vertical">
+
+             android:orientation="vertical"
+             android:visibility="visible">
 
             <RelativeLayout
                 android:id="@+id/kk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/_10sdp">
+                android:layout_marginTop="@dimen/_10sdp">
 
 
                <ImageView
@@ -58,174 +61,46 @@
                    android:layout_marginStart="14dp"
                    android:layout_marginLeft="30dp"
                    android:layout_toEndOf="@+id/menu"
-                   android:fontFamily="@font/rubik_regular"
+                   android:fontFamily="@font/poppins_semibold"
                    android:textColor="@color/white"
-                   android:textSize="@dimen/_14sdp"
-                   android:textStyle="bold" />
+                   android:textSize="@dimen/_14sdp" />
 
                <ImageView
-
                    android:id="@+id/notification_icon"
-                   android:layout_width="@dimen/_16sdp"
-                   android:layout_height="@dimen/_16sdp"
+                   android:layout_width="@dimen/_10sdp"
+                   android:layout_height="@dimen/_20sdp"
                    android:layout_alignParentEnd="true"
                    android:layout_centerVertical="true"
                    android:layout_marginRight="@dimen/_10sdp"
-                   android:background="@drawable/notificatin"
-                   android:backgroundTint="@color/white">
+                   android:background="@drawable/menu"
+                   android:backgroundTint="@color/white"
+                   android:visibility="gone">
 
                </ImageView>
 
 
             </RelativeLayout>
 
-            <ImageView
-                android:id="@+id/filter"
-                android:layout_width="@dimen/_90sdp"
-                android:layout_height="@dimen/_70sdp"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
-
-                android:layout_toStartOf="@+id/notification_icon"
-                android:background="@drawable/logo"
-                android:backgroundTint="@color/white"
-                android:visibility="visible">
-
-            </ImageView>
-
-            <TextView
-
-                android:id="@+id/account_balance_lable"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_gravity="center"
-
-                android:fontFamily="@font/rubik_regular"
-                android:text="@string/account_balance_txt"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_12sdp"></TextView>
-
-            <TextView
-                android:id="@+id/account_balance_txt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/account_balance_lable"
-
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/_2sdp"
-                android:fontFamily="@font/rubik_medium"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_18sdp"></TextView>
-
-
-            <RelativeLayout
-
-                android:id="@+id/selctedrecy"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:layout_marginRight="@dimen/_15sdp"
-                android:visibility="visible"
-
-                android:weightSum="5"
-
-
-                >
-
-               <LinearLayout
-                   android:layout_width="match_parent"
-                   android:layout_height="match_parent"
-                   android:layout_marginLeft="@dimen/_10sdp"
-                   android:background="@color/transparent">
-
-
-                  <RelativeLayout
-                      android:id="@+id/send_lyt"
-                      android:layout_width="0dp"
-                      android:layout_height="match_parent"
-                      android:layout_marginRight="@dimen/_5sdp"
-                      android:layout_weight="1"
-                      android:background="@drawable/bg_btn_border_white_place"
-                      android:clickable="true"
-
-
-                      android:foreground="?android:attr/selectableItemBackground"
-
-                      android:orientation="vertical">
-
-                     <ImageView
-                         android:id="@+id/send_logo"
-                         android:layout_width="@dimen/_30sdp"
-                         android:layout_height="@dimen/_30sdp"
-                         android:layout_centerVertical="true"
-                         android:layout_marginLeft="@dimen/_5sdp"
-                         android:src="@drawable/sendhome" />
-
-                     <TextView
-                         android:id="@+id/send_txt"
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         android:layout_centerVertical="true"
-                         android:layout_marginLeft="@dimen/_10sdp"
-                         android:layout_marginTop="3dp"
-                         android:layout_toEndOf="@+id/send_logo"
-                         android:text="@string/send_text"
-                         android:textColor="@color/black"
-                         android:textSize="@dimen/_12sdp" />
-
-
-                  </RelativeLayout>
-
-                  <RelativeLayout
-                      android:id="@+id/received_lyt"
-                      android:layout_width="0dp"
-                      android:layout_height="match_parent"
-                      android:layout_marginLeft="@dimen/_5sdp"
-                      android:layout_weight="1"
-                      android:background="@drawable/bg_btn_border_white_place"
-                      android:clickable="true"
-
-
-                      android:foreground="?android:attr/selectableItemBackground"
-
-                      android:orientation="vertical">
-
-                     <ImageView
-                         android:id="@+id/received_logo"
-                         android:layout_width="@dimen/_30sdp"
-                         android:layout_height="@dimen/_30sdp"
-                         android:layout_centerVertical="true"
-                         android:layout_marginLeft="@dimen/_5sdp"
-                         android:src="@drawable/receivedhome" />
-
-                     <TextView
-                         android:id="@+id/received_txt"
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         android:layout_centerVertical="true"
-                         android:layout_marginLeft="@dimen/_10sdp"
-                         android:layout_marginTop="3dp"
-                         android:layout_toEndOf="@+id/received_logo"
-                         android:text="@string/receive_txt"
-                         android:textColor="@color/black"
-                         android:textSize="@dimen/_12sdp" />
-
-
-                  </RelativeLayout>
-               </LinearLayout>
-            </RelativeLayout>
          </LinearLayout>
       </androidx.appcompat.widget.Toolbar>
 
       <FrameLayout
+          android:layout_above="@+id/bottomlayout"
           android:id="@+id/container"
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:layout_below="@+id/toolbar_main"
-          android:background="@color/transparent"
-          android:paddingBottom="@dimen/_50sdp" />
+          android:background="@color/white" />
+
+      <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+          android:id="@+id/adView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_above="@+id/bottomlayout"
+          android:layout_centerHorizontal="true"
+          android:visibility="visible"
+          ads:adSize="BANNER"
+          ads:adUnitId="@string/admob_banner_id"></com.google.android.gms.ads.AdView>
 
       <View
           android:id="@+id/view_home_main"
@@ -237,11 +112,12 @@
           />
 
       <RelativeLayout
-          android:layout_height="80dp"
+          android:id="@+id/bottomlayout"
+          android:layout_height="70dp"
           android:layout_alignParentBottom="true"
 
           android:visibility="visible"
-          android:background="@color/colorPrimaryDark"
+
           android:layout_width="match_parent"
 
 
@@ -253,19 +129,19 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              android:layout_centerVertical="true"
-             android:backgroundTint="@color/transparent"
-             android:weightSum="5">
+
+             android:weightSum="3">
 
             <LinearLayout
-                android:background="@color/transparent"
+
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                <LinearLayout
-                   android:id="@+id/wallet_lyout"
+                   android:id="@+id/home_layout"
                    android:layout_width="0dp"
                    android:layout_height="match_parent"
                    android:layout_gravity="center"
-
+                     android:background="@color/headline"
                    android:layout_weight="1"
                    android:gravity="center"
                    android:orientation="vertical"
@@ -273,29 +149,29 @@
 
                   <ImageView
                       android:scaleType="centerCrop"
-                      android:id="@+id/wallet_logo"
-                      android:layout_width="@dimen/_22sdp"
-                      android:layout_height="@dimen/_22sdp"
-                      android:src="@drawable/ic__wallet"
+                      android:id="@+id/home_logo"
+                      android:layout_width="@dimen/_18sdp"
+                      android:layout_height="@dimen/_18sdp"
+                      android:src="@drawable/ic_home"
                       app:tint="@color/white" />
 
                   <TextView
 
-                      android:id="@+id/wallet_txt"
+                      android:id="@+id/home_txt"
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:layout_marginTop="3dp"
-                      android:text="@string/wallet_txt"
+                      android:text="@string/home_txt"
                       android:textColor="@color/white"
-                      android:textSize="12sp" />
+                      android:textSize="@dimen/_10sdp" />
                </LinearLayout>
 
                <LinearLayout
-                   android:id="@+id/history_lyt"
+                   android:id="@+id/category_lyt"
                    android:layout_width="0dp"
                    android:layout_height="match_parent"
                    android:layout_gravity="center"
-
+                     android:background="@color/headline"
                    android:layout_weight="1"
 
                    android:gravity="center"
@@ -303,92 +179,63 @@
                    android:visibility="visible">
 
                   <ImageView
-                      android:id="@+id/history_logo"
+                      android:id="@+id/category_logo"
                       android:layout_width="@dimen/_20sdp"
                       android:layout_height="@dimen/_20sdp"
-                      android:src="@drawable/history"
+                      android:src="@drawable/category"
                       app:tint="@color/white" />
 
                   <TextView
-                      android:id="@+id/history_txt"
+                      android:id="@+id/category_txt"
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:layout_marginTop="3dp"
-                      android:text="@string/history_txt"
+                      android:text="@string/category_txt"
                       android:textColor="@color/white"
-                      android:textSize="12sp" />
+                      android:textSize="@dimen/_10sdp" />
 
                </LinearLayout>
 
 
-               <LinearLayout
+<!--               <LinearLayout-->
 
-                   android:id="@+id/add_fund_lyt"
-                   android:layout_width="0dp"
-                   android:layout_height="match_parent"
-                   android:layout_gravity="center"
-                   android:layout_weight="1"
-                   android:gravity="center"
-                   android:orientation="vertical"
-                   android:visibility="gone">
+<!--                   android:id="@+id/add_fund_lyt"-->
+<!--                   android:layout_width="0dp"-->
+<!--                   android:layout_height="match_parent"-->
+<!--                   android:layout_gravity="center"-->
+<!--                   android:layout_weight="1"-->
+<!--                   android:gravity="center"-->
+<!--                   android:orientation="vertical"-->
+<!--                   android:visibility="">-->
 
-                  <ImageView
-                      android:layout_marginTop="@dimen/_2sdp"
-                      android:id="@+id/add_fubd_logo"
-                      android:layout_width="@dimen/_36sdp"
-                      android:layout_height="@dimen/_36sdp"
-                      android:src="@drawable/ic_addfund"
-                      app:tint="@color/white" />
+<!--                  <ImageView-->
+<!--                      android:layout_marginTop="@dimen/_2sdp"-->
+<!--                      android:id="@+id/add_fubd_logo"-->
+<!--                      android:layout_width="@dimen/_36sdp"-->
+<!--                      android:layout_height="@dimen/_36sdp"-->
+<!--                      android:src="@drawable/ic_addfund"-->
+<!--                      app:tint="@color/white" />-->
 
-                  <TextView
-                      android:layout_marginBottom="@dimen/_10sdp"
-                      android:layout_marginTop="@dimen/_10sdp"
-                      android:id="@+id/add_fund_txt"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
+<!--                  <TextView-->
+<!--                      android:layout_marginBottom="@dimen/_10sdp"-->
+<!--                      android:layout_marginTop="@dimen/_10sdp"-->
+<!--                      android:id="@+id/add_fund_txt"-->
+<!--                      android:layout_width="wrap_content"-->
+<!--                      android:layout_height="wrap_content"-->
 
-                      android:text="@string/add_fund_txt"
-                      android:textColor="@color/white"
-                      android:textSize="14sp" />
+<!--                      android:text="@string/add_fund_txt"-->
+<!--                      android:textColor="@color/white"-->
+<!--                      android:textSize="14sp" />-->
 
-               </LinearLayout>
+<!--               </LinearLayout>-->
 
-
-               <LinearLayout
-                   android:id="@+id/withdraw_lyt"
-                   android:layout_width="0dp"
-                   android:layout_height="match_parent"
-                   android:layout_gravity="center"
-
-                   android:layout_weight="1"
-                   android:gravity="center"
-                   android:orientation="vertical">
-
-                  <ImageView
-                      android:id="@+id/withdraw_logo"
-                      android:layout_width="@dimen/_20sdp"
-                      android:layout_height="@dimen/_20sdp"
-                      android:src="@drawable/send"
-                      app:tint="@color/white" />
-
-                  <TextView
-                      android:id="@+id/withdraw_txt"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:layout_marginTop="3dp"
-                      android:text="@string/send_text"
-                      android:textColor="@color/white"
-                      android:textSize="12sp" />
-
-
-               </LinearLayout>
 
                <LinearLayout
                    android:id="@+id/profile_lyt"
                    android:layout_width="0dp"
                    android:layout_height="match_parent"
                    android:layout_gravity="center"
-
+                   android:background="@color/headline"
                    android:layout_weight="1"
                    android:gravity="center"
                    android:orientation="vertical">
@@ -397,7 +244,7 @@
                       android:id="@+id/profile_logo"
                       android:layout_width="@dimen/_20sdp"
                       android:layout_height="@dimen/_20sdp"
-                      android:src="@drawable/receive"
+                      android:src="@drawable/profile"
                       app:tint="@color/white" />
 
                   <TextView
@@ -405,12 +252,41 @@
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:layout_marginTop="3dp"
-                      android:text="@string/receive_txt"
+                      android:text="@string/profile_txt"
                       android:textColor="@color/white"
-                      android:textSize="12sp" />
+                      android:textSize="@dimen/_10sdp" />
 
 
                </LinearLayout>
+
+<!--               <LinearLayout-->
+<!--                   android:id="@+id/profile_lyt"-->
+<!--                   android:layout_width="0dp"-->
+<!--                   android:layout_height="match_parent"-->
+<!--                   android:layout_gravity="center"-->
+
+<!--                   android:layout_weight="1"-->
+<!--                   android:gravity="center"-->
+<!--                   android:orientation="vertical">-->
+
+<!--                  <ImageView-->
+<!--                      android:id="@+id/profile_logo"-->
+<!--                      android:layout_width="@dimen/_20sdp"-->
+<!--                      android:layout_height="@dimen/_20sdp"-->
+<!--                      android:src="@drawable/receive"-->
+<!--                      app:tint="@color/white" />-->
+
+<!--                  <TextView-->
+<!--                      android:id="@+id/profile_txt"-->
+<!--                      android:layout_width="wrap_content"-->
+<!--                      android:layout_height="wrap_content"-->
+<!--                      android:layout_marginTop="3dp"-->
+<!--                      android:text="@string/receive_txt"-->
+<!--                      android:textColor="@color/white"-->
+<!--                      android:textSize="12sp" />-->
+
+
+<!--               </LinearLayout>-->
             </LinearLayout>
 
          </RelativeLayout>
@@ -443,56 +319,149 @@
        app:menu="@menu/activity_main_drawer">
 
       <LinearLayout
+         android:layout_gravity="bottom"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:layout_gravity="bottom"
+          android:layout_marginBottom="@dimen/_30sdp"
           android:orientation="vertical">
 
-         <View
-             android:layout_width="match_parent"
-             android:layout_height="1dp"
-             android:background="@color/view_scd" />
 
-         <LinearLayout
+         <RelativeLayout
              android:id="@+id/linearLayout_main"
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
-             android:orientation="horizontal"
-             android:visibility="gone"
+
+             android:visibility="visible"
              android:padding="10dp">
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:contentDescription="@string/app_name"
-                android:src="@drawable/status_saver" />
 
-            <LinearLayout
+
+
+
+
+
+            <TextView
+
+                android:layout_above="@+id/relative_icon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:orientation="vertical">
+                android:text="Follow Us"
+                android:fontFamily="@font/poppins_regular"
+                android:textAlignment="center"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/textcolor"
+                android:id="@+id/follow"
+                ></TextView>
 
-               <TextView
+            <RelativeLayout
+
+                android:id="@+id/relative_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical">
+
+
+               <LinearLayout
+                   android:id="@+id/linear_facbook"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
-                   android:text="@string/status_saver"
-                   android:textSize="14sp"
-                   android:textStyle="bold" />
+                   android:layout_centerInParent="true"
+                   android:orientation="horizontal"
+                   android:weightSum="3">
 
-               <TextView
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:text="@string/manage_status"
-                   android:textSize="10sp"
-                   android:textStyle="bold" />
 
-            </LinearLayout>
+                  <LinearLayout
 
-         </LinearLayout>
+                      android:id="@+id/linearfacebook"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:layout_margin="5dp"
+                      android:layout_weight="1"
+                      android:orientation="vertical"
+                      >
+
+                     <ImageView
+                         android:id="@+id/sell_image"
+                         android:layout_width="@dimen/_35sdp"
+                         android:layout_height="@dimen/_35sdp"
+                         android:layout_gravity="center"
+                         android:src="@drawable/facebookl"
+                         />
+
+                  </LinearLayout>
+
+
+                  <LinearLayout
+                      android:id="@+id/linear_print"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:layout_margin="5dp"
+                      android:layout_weight="1"
+                      android:orientation="vertical"
+
+                      android:visibility="visible">
+
+                     <ImageView
+                         android:id="@+id/buttonGoogle"
+                         android:layout_width="@dimen/_35sdp"
+                         android:layout_height="@dimen/_35sdp"
+                         android:layout_gravity="center"
+                         android:src="@drawable/print" />
+
+                  </LinearLayout>
+
+                  <LinearLayout
+                      android:id="@+id/linear_twit"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:layout_margin="5dp"
+                      android:layout_weight="1"
+                      android:orientation="vertical"
+
+                      android:visibility="visible">
+
+                     <ImageView
+                         android:id="@+id/orders_image"
+                         android:layout_width="@dimen/_35sdp"
+                         android:layout_height="@dimen/_35sdp"
+                         android:layout_gravity="center"
+                         android:src="@drawable/twitternewl" />
+
+                  </LinearLayout>
+
+                  <LinearLayout
+                      android:id="@+id/linear_insta"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:layout_margin="5dp"
+                      android:layout_weight="1"
+                      android:orientation="vertical"
+                     >
+
+                     <ImageView
+                         android:id="@+id/linkedin"
+                         android:layout_width="@dimen/_35sdp"
+                         android:layout_height="@dimen/_35sdp"
+                         android:layout_gravity="center"
+                         android:src="@drawable/insta" />
+
+                  </LinearLayout>
+
+               </LinearLayout>
+            </RelativeLayout>
+
+
+
+
+<!--            </LinearLayout>-->
+
+         </RelativeLayout>
 
       </LinearLayout>
 

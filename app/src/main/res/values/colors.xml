@@ -2,8 +2,8 @@
 <resources>
     <color name="colorPrimary">#029E9A40</color>
 
-    <color name="colorPrimaryDark">#029E9A</color>
-    <color name="dimcolorPrimaryDark">#2F0CDDD8</color>
+    <color name="colorPrimaryDark">#3E71E6</color>
+    <color name="dimcolorPrimaryDark">#C3D3F6</color>
     <color name="colorAccent">#0075BE</color>
     <color name="navigation_drawer">#FFFFFF</color>
 
@@ -12,11 +12,14 @@
     <color name="transparent">#00000000</color>
     <color name="backgroundcolor">#176AAEAC</color>
     <color name="white">#FFFFFF</color>
-    <color name="textcolor">#B9B9B9</color>
-    <color name="lightwhite">#85FFFFFF</color>
-    <color name="headline">#A7A7A7</color>
+    <color name="textcolor">#888888</color>
+
+    <color name="lightwhite">#B9FFFFFF</color>
+    <color name="headline">#484848</color>
     <color name="green">#4AA02C</color>
     <color name="view_scd">#E4E4E4</color>
     <color name="black">#121212</color>
+    <color name="pink">#F6C3D4</color>
+    <color name="simmer">#dddddd</color>
 
 </resources>

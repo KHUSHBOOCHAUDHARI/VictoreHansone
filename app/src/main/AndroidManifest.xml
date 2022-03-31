@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.business.agrocoin">
+    package="com.business.victorehansone">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -8,50 +8,91 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-        android:name="com.business.agrocoin.Util.YouApplication"
+        android:name=".Util.YouApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:preserveLegacyExternalStorage="true"
         android:requestLegacyExternalStorage="true"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
         <activity
-            android:name="com.business.agrocoin.Activity.ScanBarCodeActivity"
+            android:name=".Activity.LayoutActivity"
             android:exported="false" />
         <activity
-            android:name="com.business.agrocoin.Activity.NotificationActivity"
+            android:name=".Activity.SetCustomFontActivity"
             android:exported="false" />
         <activity
-            android:name="com.business.agrocoin.Activity.TermandCondition"
+            android:name=".Activity.SettingActivity"
             android:exported="false" />
         <activity
-            android:name="com.business.agrocoin.Activity.EditProfile"
+            android:name=".Activity.PastNewLettersActivity"
             android:exported="false" />
         <activity
-            android:name="com.business.agrocoin.Activity.PrivacyPolicy"
+            android:name=".Activity.SavePostListActivity"
             android:exported="false" />
         <activity
-            android:name="com.business.agrocoin.Activity.FaqActivity"
+            android:name=".Activity.OfferActivity"
             android:exported="false" />
         <activity
-            android:name="com.business.agrocoin.Activity.ContactUsActivity"
+            android:name=".Activity.OfferDetailActivity"
             android:exported="false" />
         <activity
-            android:name="com.business.agrocoin.Activity.ChangePasswordActivity"
+            android:name=".Activity.SubscriptionHistoryActivity"
             android:exported="false" />
         <activity
-            android:name="com.business.agrocoin.Activity.SignupActivity"
+            android:name=".Activity.SearchActivity"
             android:exported="false" />
         <activity
-            android:name="com.business.agrocoin.Activity.LoginActivity"
+            android:name=".Activity.PoadCastActivity"
             android:exported="false" />
         <activity
-            android:name="com.business.agrocoin.Activity.MainActivity"
+            android:name=".Activity.CategoryPostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.BlogDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.SubscribeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ScanBarCodeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.TermandCondition"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.EditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.PrivacyPolicy"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.FaqActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ContactUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.MainActivity"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.business.agrocoin.Activity.SplaceActivity"
+            android:name=".Activity.SplaceActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -62,15 +103,17 @@
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
-            android:resource="@drawable/logo" />
+            android:resource="@drawable/ic_round_close_24" />
+
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
-            android:resource="@color/colorPrimary" />
+            android:resource="@color/colorPrimaryDark" />
 
         <service
             android:name="com.google.android.gms.analytics.AnalyticsService"
             android:enabled="true"
             android:exported="false" />
+
 
         <receiver
             android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"
@@ -80,21 +123,40 @@
             </intent-filter>
         </receiver>
 
-        <service android:name="com.google.android.gms.analytics.CampaignTrackingService" />
+        <service android:name="com.google.android.gms.analytics.CampaignTrackingService" /> <!-- AdMob Ads SDK -->
+
+
+
+
+
+
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id" />
+
         <service
-            android:name="com.business.agrocoin.Util.MyFirebaseMessagingService"
+            android:name=".Util.MyFirebaseMessagingService"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
         <service
-            android:name="com.business.agrocoin.Util.MyFirebaseInstanceIDService"
+            android:name=".Util.MyFirebaseInstanceIDService"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" /> <!-- Add your API key here -->
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
 
         <meta-data
             android:name="com.google.android.gms.version"

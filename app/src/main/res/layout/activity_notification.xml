@@ -6,62 +6,56 @@
         android:layout_height="match_parent">
 
         <androidx.appcompat.widget.Toolbar
+
             android:id="@+id/toolbarlyt"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_80sdp"
-            android:background="@drawable/ic_rectangle_6188">
-            <RelativeLayout
-                android:layout_marginTop="@dimen/_10sdp"
+            android:layout_height="wrap_content"
+            android:background="@color/black">
+            <LinearLayout
+
+                android:layout_marginTop="@dimen/_30sdp"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_80sdp">
-
-                <ImageView
-                    android:id="@+id/menu"
-                    android:layout_width="@dimen/_15sdp"
-                    android:layout_height="@dimen/_15sdp"
-                    android:layout_centerVertical="true"
-
-                    android:background="@drawable/ic_back">
-
-                </ImageView>
-
-                <TextView
-
-                    android:id="@+id/title_txt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="@dimen/_10sdp"
-                    android:layout_toEndOf="@+id/menu"
-                    android:fontFamily="@font/overpass_regular"
-                    android:text="Notifications"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_16sdp"></TextView>
-
-                <ImageView
-                    android:visibility="gone"
+                android:layout_height="wrap_content"
+                >
+                <RelativeLayout
+                    android:layout_marginBottom="@dimen/_10sdp"
                     android:layout_marginRight="@dimen/_10sdp"
-                    android:layout_centerVertical="true"
-                    android:id="@+id/notification_icon"
-                    android:layout_alignParentEnd="true"
-                    android:layout_width="@dimen/_16sdp"
-                    android:layout_height="@dimen/_16sdp"
-                    android:background="@drawable/notificatin">
+                    android:id="@+id/toolbarrecy"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                </ImageView>
+                    <ImageView
+                        android:id="@+id/menu"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:background="@drawable/ic_back">
 
-                <ImageView
-                    android:visibility="gone"
-                    android:layout_width="@dimen/_16sdp"
-                    android:layout_height="@dimen/_19sdp"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="@dimen/_10sdp"
-                    android:layout_toStartOf="@+id/notification_icon"
-                    android:background="@drawable/filter">
+                    </ImageView>
 
-                </ImageView>
-            </RelativeLayout>
+                    <TextView
+                        android:id="@+id/title_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_toEndOf="@+id/menu"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/notofication_list"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14sdp"></TextView>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
         </androidx.appcompat.widget.Toolbar>
+
         <RelativeLayout
             android:layout_marginRight="@dimen/_10sdp"
             android:layout_marginLeft="@dimen/_10sdp"
@@ -74,22 +68,22 @@
 
             <TextView
                 android:visibility="gone"
-                android:id="@+id/tran_history_txt"
+                android:id="@+id/tran_category_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/overpass_bold"
-                android:text="@string/all_transaction_history_txt"
+
                 android:textColor="@color/white"
                 android:textSize="@dimen/_16sdp"></TextView>
             <TextView
                 android:visibility="gone"
-                android:layout_below="@+id/tran_history_txt"
+                android:layout_below="@+id/tran_category_txt"
                 android:fontFamily="@font/overpass_italic"
                 android:layout_marginTop="@dimen/_3sdp"
-                android:id="@+id/no_tran_history_txt"
+                android:id="@+id/no_tran_category_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/no_transaction_history_txt"
+                android:text="@string/no_transaction_category_txt"
                 android:textColor="@color/headline"
                 android:textSize="@dimen/_12sdp"
                 ></TextView>
@@ -99,7 +93,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_above="@+id/add_payment_btn"
-                android:layout_below="@+id/tran_history_txt"
+                android:layout_below="@+id/tran_category_txt"
 
                 ></androidx.recyclerview.widget.RecyclerView>
 

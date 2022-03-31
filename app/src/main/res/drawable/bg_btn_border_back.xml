@@ -7,7 +7,7 @@
         android:bottomRightRadius="7dp"/>
     <stroke
 
-        android:color="@color/dimcolorPrimaryDark"
+        android:color="@color/textcolor"
         android:width="1dp"></stroke>
 
 </shape>

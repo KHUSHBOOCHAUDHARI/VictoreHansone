@@ -70,7 +70,7 @@
             android:layout_height="@dimen/_18sdp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
-            android:background="@drawable/user"
+            android:background="@drawable/ic_user"
             android:backgroundTint="@color/textcolor"></ImageView>
 
         <EditText
@@ -117,7 +117,7 @@
             android:layout_height="@dimen/_18sdp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
-            android:background="@drawable/user"
+            android:background="@drawable/ic_user"
             android:backgroundTint="@color/textcolor"></ImageView>
 
         <EditText

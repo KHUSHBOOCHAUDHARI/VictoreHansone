@@ -1,19 +1,27 @@
 <resources>
-    <string name="app_name">Agrocoin</string>
+    <string name="app_name"> Blade Of Perseus</string>
+
     <string name="login_now_text">Login Now</string>
     <string name="send_text">Send</string>
+    <string name="Twitter.CONSUMER_KEY">e7tYDaMTX6jkaRYlGc2aV7ry4</string>
+    <string name="Twitter.CONSUMER_SECRET">seOMDOmAiDlWhXdRTodImMRcPcuWxnF7wABfUovPtnWEmQZatT</string>
     <string name="signup_now_text">Signup Now</string>
     <string name="donthave_txt">Dont have any account?</string>
     <string name="already_txt">Already have account?</string>
     <string name="forgotepsword_txt">Forgot Password\? \  </string>
     <string name="enter_email_id">Enter Your Email Address </string>
-    <string name="enter_user_name">Enter Your User Name </string>
+    <string name="enter_user_name">Enter Username</string>
     <string name="enter_validemail_id">Enter Valid Email Address </string>
     <string name="enter_validephone_no">Enter Valid Mobile Number </string>
     <string name="enter_password_txt">Enter Password</string>
+    <string name="subscription_txt">Subscription History</string>
+    <string name="enable_push_notification">Enable Push Notification</string>
+    <string name="txt_or">OR</string>
+
+
     <string name="enter_confiram_txt">Confirm Password</string>
     <string name="strong_password_validation">Please Create Strong Password</string>
-    <string name="login_with_youraccount_txt">Login with your Account</string>
+    <string name="login_to">Login to</string>
     <string name="receive_txt">Receive</string>
     <string name="createaaccount_txt">Create a New Account</string>
     <string name="referalcode_txt">Enter Referral Code</string>
@@ -23,22 +31,56 @@
     <string name="ok">Ok</string>
     <string name="Please_click_BACK_again_to_exit">Please click BACK again to exit</string>
     <string name="internet_connection" translatable="false">Internet connection not available</string>
+    <!-- TODO - add your ad unit Ids -->
+    <!-- AdMob ad unit IDs -->
+    <string name="admob_app_id">
+ca-app-pub-3940256099942544~3347511713</string>
+    <string name="admob_banner_id">
+ca-app-pub-3940256099942544/6300978111</string>
+
+    //Subscription Txt
+    <string name="subscription_now">Subscribe Now</string>
+    <string name="setting_txt">Settings</string>
+    <string name="set_custom_font_txt">Set Custom Font Size</string>
+    <string name="layout_txt">Layout</string>
+    <string name="subscription_plan_txt">Subscription Plan</string>
+    <string name="subscription_history_txt">Subscription History</string>
+    <string name="pastnewsletters_txt">Past Newsletters</string>
+    <string name="subscription_plan_msg">With any subscription you get :</string>
+    <string name="regular_daily_content">Regular Daily Content</string>
+    <string name="book_reviews_and_articles">Book Reviews And Articles</string>
+    <string name="weekly_podcasts">3-4 Weekly Podcasts</string>
+    <string name="guest_appearances_on_radio_and_tv_shows">Guest Appearances On Radio And TV Shows</string>
+    <string name="victor_monthly_newsletter">Victor’s Monthly Newsletter</string>
+    <string name="palm_txt">Plan</string>
+    <string name="price">Price:</string>
+    <string name="mothly_txt">Monthly</string>
+    <string name="yearly_txt">Yearly</string>
+    <string name="one_time_txt">One Time</string>
+    <string name="one_month">One Month</string>
+    <string name="one_year">One Year</string>
+    <string name="free">Free</string>
+    <string name="suscription">Subscription</string>
     //Home
-    <string name="welcome_dashboard_txt">Welcome To Agrocoin</string>
+    <string name="welcome_dashboard_txt">Welcome to Dashboard</string>
     <string name="dashboard_txt">Dashboard</string>
-    <string name="wallet_txt">Wallet</string>
-    <string name="history_txt">History</string>
-    <string name="add_fund_txt">Add Fund</string>
-    <string name="withdraw_txt">Withdraw</string>
-    <string name="profile_setting_txt">Profile Setting</string>
+    <string name="home_txt">HOME</string>
+    <string name="category_txt">CATEGORIES</string>
+    <string name="category_txt_tootlbar">Category Post</string>
+
+    <string name="profile_txt">PROFILE</string>
+
+    <string name="profile_setting_txt">Profile</string>
     <string name="account_balance_txt">Account Balance</string>
     <string name="interested_paid_txt">Total Interest Paid</string>
     <!--    <string name="invite_your_friend_txt">Invite your friends to join & get up to 1% of the total invest done by referral</string>-->
 
-    <string name="transaction_history_txt">Transaction History</string>
-    <string name="list_wallet_txt">List Of Wallet</string>
-    <string name="all_transaction_history_txt">Showing All Transactions</string>
-    <string name="no_transaction_history_txt">No Transaction yet made to display.</string>
+    <string name="list_category_txt">List of Categories</string>
+    <string name="notofication_list">Notifications</string>
+    <string name="notofication_txt">Notification</string>
+    <string name="list_home_txt">List Of Wallet</string>
+    <string name="select_category_txt">Select from Different Categories</string>
+    <string name="no_transaction_category_txt">No Transaction yet made to display.</string>
     <string name="totla_amount_txt">Total Amount:</string>
     <string name="payment_setting_txt">Payment Setting</string>
     <string name="change_pasword_txt">Change Password</string>
@@ -62,9 +104,10 @@
     <!--    Api=..................................................-->
     <string name="something_went_wrong">Something went wrong</string>
     <string name="failed_try_again">Failed try again</string>
-    <string name="register_user">register?</string>
+    <string name="register_ic_user">register?</string>
     <string name="register_now">Register Now</string>
-    <string name="login_user">login?</string>
+    <string name="login_ic_user">vh_custom_api.php</string>
+    <string name="posts_api">posts?</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="transection_history">getTransactionList?</string>
@@ -77,5 +120,13 @@
     <string name="notification_list_api">notification_list</string>
     <string name="withdrow_api">withdraw?</string>
     <string name="create_allet">createWallet?</string>
+    <string name="category_api">categories?</string>
+    <string name="posts_detail_api">posts/</string>
+    <string name="about_us">pages/2?context=view</string>
+    <string name="search_api">search?</string>
+    <string name="comment_list_api">comments?</string>
+    <string name="facebook_app_id">297268392550155</string>
+    <string name="get_posts_like_api">Getpostlike?</string>
+    <string name="save_txt">Save</string>
 
 </resources>

@@ -6,7 +6,7 @@ android {
     compileSdkVersion 31
 
     defaultConfig {
-        applicationId "com.business.agrocoin"
+        applicationId "com.business.victorehansone"
         minSdk 21
         targetSdk 31
         versionCode 1
@@ -45,6 +45,9 @@ android {
     dataBinding {
         enabled true;
     }
+    dataBinding {
+        enabled true
+    }
     buildFeatures {
         viewBinding true
     }
@@ -75,19 +78,60 @@ dependencies {
     implementation 'com.google.apis:google-api-services-plus:v1-rev436-1.22.0'
     implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
-    implementation 'com.google.firebase:firebase-messaging:12.0.0'
-    implementation 'com.google.android.gms:play-services:12.0.0'
-    implementation 'com.google.android.gms:play-services-analytics:10.2.1'
+    implementation 'com.google.android.gms:play-services-maps:18.0.2'
+    implementation 'com.google.android.gms:play-services-vision:20.1.3'
+
+    implementation 'com.google.firebase:firebase-messaging:17.0.0'
+    implementation "com.google.firebase:firebase-auth:21.0.2"
+    implementation 'com.google.android.gms:play-services-auth:20.1.0'
+    implementation 'com.google.android.gms:play-services-gcm:17.0.0'
+    implementation 'com.google.android.gms:play-services-analytics:18.0.1'
+
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'io.github.inflationx:viewpump:2.0.3'
     implementation 'io.github.inflationx:calligraphy3:3.1.1'
     implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'com.google.firebase:firebase-config:21.0.2'
     implementation 'com.googlecode.libphonenumber:libphonenumber:7.0.4'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
     implementation 'com.github.joielechong:countrycodepicker:2.4.2'
     implementation 'com.hbb20:ccp:2.4.2'
 
+    //Circular Image View
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.google.code.gson:gson:2.8.7'
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'com.googlecode.libphonenumber:libphonenumber:7.0.4'
+    implementation 'com.android.volley:volley:1.1.0'
+    //viewpager 2
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    implementation 'io.github.inflationx:viewpump:2.0.3'
+    //rounded imageview
+    implementation 'com.makeramen:roundedimageview:2.3.0'
     //Qrcode
     implementation 'com.google.zxing:core:3.2.1'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'org.sufficientlysecure:html-textview:4.0'
+    //Twitter Login
+    implementation 'com.twitter.sdk.android:twitter:3.1.1'
+    implementation 'com.twitter.sdk.android:twitter-core:3.1.1'
+    //for Facbook Login
+    implementation 'com.facebook.android:facebook-android-sdk:12.3.0'
+    implementation 'androidx.work:work-runtime-ktx:2.7.0'
+    implementation 'com.google.android.gms:play-services-ads:18.3.0'
+    //Addmob
+    implementation 'com.google.firebase:firebase-auth:16.0.4'
+    //Like&Unlike
+    implementation 'com.github.jd-alexander:LikeButton:0.2.3'
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    //Simmerefect
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    implementation 'com.asksira.android:webviewsuite:1.0.3'
+    //loder'
+    implementation "com.airbnb.android:lottie:3.4.2"
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
 }
 apply plugin: 'com.google.gms.google-services'
+
+

@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.SubscribeActivity"
+
+  >
+    <androidx.appcompat.widget.Toolbar
+
+        android:id="@+id/toolbarlyt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+        <LinearLayout
+
+            android:layout_marginTop="@dimen/_30sdp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <RelativeLayout
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:id="@+id/toolbarrecy"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/menu"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:background="@drawable/ic_back">
+
+                </ImageView>
+
+                <TextView
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:id="@+id/title_txt"
+                    android:layout_width="match_parent"
+                    android:ellipsize="end"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toEndOf="@+id/menu"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/subscription_history_txt"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp"></TextView>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <ScrollView
+        android:fitsSystemWindows="true"
+        android:id="@+id/scrollview"
+        android:visibility="visible"
+        android:layout_below="@+id/toolbarlyt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:id="@+id/image_card"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:background="@drawable/posterone"
+                android:visibility="visible"
+               app:cardCornerRadius="@dimen/_7sdp">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+
+                    android:visibility="visible" />
+                <ImageView
+                    android:layout_gravity="end"
+                    android:id="@+id/share"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+
+                    android:background="@drawable/share"
+                    android:visibility="visible" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <RelativeLayout
+                android:layout_marginLeft="@dimen/_10sdp"
+
+                android:id="@+id/UDH_layout"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_below="@+id/image_card"
+                android:background="@drawable/bg_btn_border_white_place"
+                android:layout_width="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:backgroundTint="@color/black"
+                android:layout_height="wrap_content"
+                >
+
+                <RelativeLayout
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/search"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_width="@dimen/_8sdp"
+                        android:layout_height="@dimen/_8sdp"
+                        android:src="@drawable/lock"
+                        android:tint="@color/white"
+                        ></ImageView>
+
+                    <TextView
+                        android:id="@+id/vdh_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_2sdp"
+                        android:layout_toEndOf="@+id/search"
+                        android:fontFamily="@font/poppins_light"
+                        android:gravity="center"
+                        android:text="VDH Ultra"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_8sdp"></TextView>
+                </RelativeLayout>
+
+
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+
+                android:id="@+id/date_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_card"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_toEndOf="@+id/UDH_layout"
+                android:background="@drawable/bg_btn_border_white_place"
+                android:backgroundTint="@color/dimcolorPrimaryDark">
+
+                <TextView
+                    android:id="@+id/date_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_7sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:fontFamily="@font/poppins_light"
+
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_8sdp"></TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                android:id="@+id/comment_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_card"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_toEndOf="@+id/date_layout"
+                android:background="@drawable/bg_btn_border_white_place"
+                android:backgroundTint="@color/pink">
+
+                <TextView
+                    android:id="@+id/comment_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_7sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+
+                    android:fontFamily="@font/poppins_light"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_8sdp"></TextView>
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:id="@+id/headline_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/date_layout"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/news_txt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/headline_txt"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/headline"
+                android:textSize="@dimen/_10sdp">
+
+            </TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/commentlist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/news_txt"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+            <ProgressBar
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone"
+                android:id="@+id/progressBar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+
+              android:layout_centerHorizontal="true"
+                android:layout_below="@+id/news_txt"
+                android:indeterminateTint="@color/colorPrimaryDark" />
+
+            <TextView
+                android:id="@+id/textView_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/news_txt"
+                android:layout_centerHorizontal="true"
+
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="No Comment Found"
+
+                android:textColor="@color/textcolor"
+                android:textSize="18sp"
+
+                android:visibility="gone" />
+            <RelativeLayout
+
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_below="@+id/commentlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/comment_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Leave a Comment"
+                    android:textColor="@color/headline"
+                    android:textSize="@dimen/_12sdp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/comment_new_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/comment_tag"
+                    android:layout_marginLeft="@dimen/_10sdp"
+
+                    android:layout_marginRight="@dimen/_10sdp"
+
+                    android:fontFamily="@font/poppins_light"
+                    android:text="Your email address will not be published. Required fields are marked *"
+                    android:textColor="@color/headline"
+                    android:textSize="@dimen/_10sdp" />
+                <androidx.cardview.widget.CardView
+                    android:layout_below="@+id/comment_new_tag"
+                    android:id="@+id/msg_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:cardElevation="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_marginBottom="10dp">
+                    <EditText
+                        android:id="@+id/msg_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:maxLines="3"
+                        android:minLines="3"
+                        android:gravity="top"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="@font/poppins_italic"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:hint="Type here...."
+                        ></EditText>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:visibility="gone"
+                    android:layout_below="@+id/msg_layout"
+                    android:id="@+id/name_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:cardElevation="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_marginBottom="10dp"
+                    >
+                    <EditText
+                        android:id="@+id/name_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="@font/poppins_italic"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:hint="Name*"
+                        >
+
+
+                    </EditText>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:visibility="gone"
+                    android:id="@+id/email_lyt"
+                    android:layout_below="@+id/name_layout"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:cardElevation="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_marginBottom="10dp"
+                    >
+                    <EditText
+                        android:id="@+id/email_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="@font/poppins_italic"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:hint="Email Address*"
+                        >
+
+
+                    </EditText>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:visibility="gone"
+                    android:id="@+id/website_lyt"
+                    android:layout_below="@+id/email_lyt"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:cardElevation="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_marginBottom="10dp"
+                    >
+                    <EditText
+                        android:id="@+id/website_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="@font/poppins_italic"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:hint="Website"
+                        >
+
+
+                    </EditText>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/post_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/website_lyt"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="@dimen/_50sdp"
+                    android:background="@drawable/gradient_history"
+                    android:backgroundTint="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_8sdp"
+                    android:text="Post Comment"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp"></TextView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_home_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:visibility="gone"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/filter" />
+
+
+    <ProgressBar
+
+        android:id="@+id/progressbar_loadmore"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:indeterminateTint="@color/colorPrimaryDark"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/text_keyword_hide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text=""
+        android:visibility="gone"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+
+
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/admob_banner_id"></com.google.android.gms.ads.AdView>
+
+
+    <ProgressBar
+
+        android:id="@+id/Progressbar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:indeterminateTint="@color/colorPrimaryDark"
+        android:visibility="gone" />
+
+
+
+
+
+</RelativeLayout>
+</layout>

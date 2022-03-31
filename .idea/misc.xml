@@ -16,7 +16,7 @@
         <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/activity_edit.xml" value="0.26962025316455696" />
         <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/activity_edit_profile.xml" value="0.26962025316455696" />
         <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/activity_main.xml" value="0.20388349514563106" />
         <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/activity_notification.xml" value="0.22" />
         <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/activity_payment_setting.xml" value="0.18888888888888888" />
         <entry key="..\:/Backup/AgoraCoin/app/src/main/res/layout/activity_pdfuploade.xml" value="0.26962025316455696" />
@@ -49,6 +49,62 @@
         <entry key="..\:/Backup/Cryptosoar/app/src/main/res/layout/coin_list_item.xml" value="0.27341772151898736" />
         <entry key="..\:/Backup/Cryptosoar/app/src/main/res/layout/fragment_bottomsheet_coin.xml" value="0.27341772151898736" />
         <entry key="..\:/Backup/Cryptosoar/app/src/main/res/layout/profile_fragment.xml" value="0.25" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/drawable-v24/progress_animation.xml" value="0.20185185185185187" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/drawable/bg_botom_round.xml" value="0.21944444444444444" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/drawable/bg_btn_border_back.xml" value="0.22" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/drawable/bg_btn_border_white_place.xml" value="0.2101851851851852" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/drawable/bg_right_round_back.xml" value="0.21944444444444444" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/drawable/bg_whitebtnround.xml" value="0.28649789029535866" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/drawable/gradient_history.xml" value="0.19074074074074074" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/drawable/ic_right.xml" value="0.2101851851851852" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/drawable/ic_round_close_24.xml" value="0.19907407407407407" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/drawable/ic_user.xml" value="0.21944444444444444" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/activity_blog_detail.xml" value="0.16" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/activity_category_post.xml" value="0.2" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/activity_contact_us.xml" value="0.1" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/activity_edit_profile.xml" value="0.30091743119266057" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/activity_layout.xml" value="0.2" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/activity_notification.xml" value="0.1675925925925926" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/activity_offer.xml" value="0.27692307692307694" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/activity_offer_detail.xml" value="0.2653846153846154" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/activity_past_new_letters.xml" value="0.27692307692307694" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/activity_poad_cast.xml" value="0.18" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/activity_save_post_list.xml" value="0.27692307692307694" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/activity_search.xml" value="0.2653846153846154" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/activity_set_custom_font.xml" value="0.27692307692307694" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/activity_setting.xml" value="0.2596685082872928" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/activity_splace.xml" value="0.14" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/activity_subscribe.xml" value="0.18" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/activity_subscription_history.xml" value="0.67" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/activity_termand_condition.xml" value="0.22" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/all_home_list.xml" value="0.2" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/all_transection_list.xml" value="0.22" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/banner_ad_row.xml" value="0.27692307692307694" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/category_fragment.xml" value="0.2" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/comment_list.xml" value="0.18" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/dialog_filter.xml" value="0.25" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/dialog_forgetpassword.xml" value="0.27307692307692305" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/fragment_home.xml" value="0.27307692307692305" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/history_fragment.xml" value="0.27692307692307694" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/home_fragment.xml" value="0.18" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/home_layout_simmer.xml" value="0.2" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/home_list.xml" value="0.18" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/nav_header_main.xml" value="0.22" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/notificatio_list.xml" value="0.27692307692307694" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/offerlist_list.xml" value="0.25" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/profile_fragment.xml" value="0.22" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/received_fragment.xml" value="0.27692307692307694" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/savepost_list.xml" value="0.27692307692307694" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/search_list_item.xml" value="0.27692307692307694" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/slide_item_container.xml" value="0.2" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/subscription_layout.xml" value="0.18" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/subscription_list_history.xml" value="0.21981424148606812" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/wallet_fragment.xml" value="0.25" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/wallet_list_item.xml" value="0.27692307692307694" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/menu/activity_main_drawer.xml" value="0.2" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/menu/menu.xml" value="0.18" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/bg_botom_round.xml" value="0.2152777777777778" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/bg_botom_round_min.xml" value="0.13518518518518519" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/Cryptosoar/app/src/main/res/drawable/bg_btn_border.xml" value="0.21481481481481482" />

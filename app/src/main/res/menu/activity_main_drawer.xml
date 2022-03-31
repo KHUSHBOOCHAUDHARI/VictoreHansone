@@ -1,41 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
-        <group android:checkableBehavior="single">
-
-
-        <!-- upload_video-->
+    <group android:checkableBehavior="single">
+    <!-- upload_video-->
         <item
-            android:id="@+id/wallet"
-            android:title="@string/wallet_txt"
+            android:id="@+id/home"
+            android:title="Home"
+            app:iconTint="@drawable/selector"
+        />
+
+        <item
+            android:visible="false"
+            android:id="@+id/newsletter"
+            android:title="Past Newsletters"
+            app:iconTint="@drawable/selector"
+        />
+        <item
+            android:id="@+id/offers"
+
+            android:title="Offers"
+            app:iconTint="@drawable/selector"
+            />
+        <item
+            android:id="@+id/podcasts"
+
+            android:title="Podcasts"
             app:iconTint="@drawable/selector"
             />
 
         <item
-            android:id="@+id/transection"
-            android:title="@string/history_txt"
-            app:iconTint="@drawable/selector"
-            />
-            
+            android:id="@+id/aboutus"
 
+            android:title="About Us"
+            app:iconTint="@drawable/selector"
+        />
         <item
-            android:id="@+id/send"
+            android:id="@+id/contactus"
 
-            android:title="@string/send_text"
+            android:title="Contact Prof. Hanson"
             app:iconTint="@drawable/selector"
-            />
-        <item
-            android:id="@+id/recieved"
-
-            android:title="@string/receive_txt"
-            app:iconTint="@drawable/selector"
-            />
+        />
         <item
             android:id="@+id/logout"
             android:title="@string/logout_txt"
             app:iconTint="@drawable/selector"
-            />
+        />
 
 
         </group>

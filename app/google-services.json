@@ -1,42 +1,49 @@
 {
   "project_info": {
-    "project_number": "929761520463",
-    "project_id": "agrocoin-93fc0",
-    "storage_bucket": "agrocoin-93fc0.appspot.com"
+    "project_number": "541316184815",
+    "project_id": "victor-hanson-7d904",
+    "storage_bucket": "victor-hanson-7d904.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:929761520463:android:027f8fdf9ba037995eb33a",
+        "mobilesdk_app_id": "1:541316184815:android:f58c500da2b410121d391a",
         "android_client_info": {
-          "package_name": "com.business.agrocoin"
+          "package_name": "com.business.victorehansone"
         }
       },
       "oauth_client": [
         {
-          "client_id": "929761520463-jg9oknf2a3su97hksthgttu8m5tq6568.apps.googleusercontent.com",
+          "client_id": "541316184815-fo41fuek38i3str0do87iq7cl2doodp9.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.business.agrocoin",
+            "package_name": "com.business.victorehansone",
             "certificate_hash": "7753a9b196f3bdca6359aff443ae723b6e148639"
           }
         },
         {
-          "client_id": "929761520463-qcktuk1a0jsku2t6ns5taa9vs26g35cn.apps.googleusercontent.com",
+          "client_id": "541316184815-ft08tqfepqbalv1kjtitv40jng871qn7.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDHZfcSsWwIBDwBhNfZp3fl7Qkx-dLos6E"
+          "current_key": "AIzaSyBkYVarj4GdWe_l6LbdJ5ckbGbBJO6KK6M"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "929761520463-qcktuk1a0jsku2t6ns5taa9vs26g35cn.apps.googleusercontent.com",
+              "client_id": "541316184815-ft08tqfepqbalv1kjtitv40jng871qn7.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "541316184815-fa0nhtm1g9p55apoh1mu5fmhkk6mrac3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.VDH.app"
+              }
             }
           ]
         }

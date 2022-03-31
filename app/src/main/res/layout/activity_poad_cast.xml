@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/backgroundcolor"
+        android:layout_height="match_parent"
+        tools:context=".Activity.PrivacyPolicy">
+
+
+        <androidx.appcompat.widget.Toolbar
+
+            android:id="@+id/toolbarlyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black">
+            <LinearLayout
+
+                android:layout_marginTop="@dimen/_30sdp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <RelativeLayout
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:id="@+id/toolbarrecy"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/menu"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:background="@drawable/ic_back">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/title_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_toEndOf="@+id/menu"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Offers"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14sdp"></TextView>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.asksira.webviewsuite.WebViewSuite
+            android:id="@+id/webViewSuite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:url="@string/url"
+            app:webViewProgressBarStyle="circular"
+            app:inflationDelay="100"
+            app:enableJavaScript="true"
+            app:overrideTelLink="true"
+            android:layout_below="@+id/toolbarlyt"
+            app:overrideEmailLink="true"
+            app:overridePdfLink="true"
+            app:showZoomControl="true"
+            app:enableVerticalScrollBar="true"
+            app:enableHorizontalScrollBar="true"/>
+
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progress"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/colorPrimaryDark" />
+    </RelativeLayout>
+</layout>

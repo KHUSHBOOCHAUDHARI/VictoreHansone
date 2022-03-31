@@ -11,13 +11,38 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
+        <TextView
             android:id="@+id/logo"
-
-            android:layout_width="@dimen/_250sdp"
-            android:layout_height="@dimen/_200sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
             android:layout_centerInParent="true"
-            android:background="@drawable/logo"></ImageView>
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/logo"
+           ></TextView>
+
+
+        <com.airbnb.lottie.LottieAnimationView
+
+            android:id="@+id/lottieLogo"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom"
+            android:baselineAlignBottom="true"
+            android:visibility="visible"
+
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/dots" />
+
+
+
 
          </RelativeLayout>
+
+
 </RelativeLayout>

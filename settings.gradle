@@ -3,10 +3,11 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        mavenLocal()
         jcenter() // Warning: this repository is going to shut down soon
-        maven { url "https://jitpack.io" }
+        maven { url "https://www.jitpack.io" }
 
     }
 }
-rootProject.name = "Agrocoin"
+rootProject.name = "VictoreHansone"
 include ':app', ':imagepicker'

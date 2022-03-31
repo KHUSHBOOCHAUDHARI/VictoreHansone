@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_170sdp"
+    xmlns:app="http://schemas.android.com/tools"
+    android:id="@+id/ic_userPinCardView"
+    android:layout_height="@dimen/_85sdp"
+    android:orientation="vertical"
+    xmlns:cardciew="http://schemas.android.com/apk/res-auto"
+    cardciew:cardCornerRadius="@dimen/_5sdp"
+    android:layout_marginRight="@dimen/_5sdp"
+    android:layout_marginLeft="@dimen/_5sdp"
+    android:background="@drawable/bg_btn_border_back"
+    android:backgroundTint="@color/white"
+    android:layout_marginTop="5dp"
+    app:ignore="NamespaceTypo">
+
+    <androidx.cardview.widget.CardView
+        android:background="@drawable/posterone"
+        android:id="@+id/image_card"
+        cardciew:cardCornerRadius="@dimen/_7sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_85sdp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:src="@drawable/posterone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

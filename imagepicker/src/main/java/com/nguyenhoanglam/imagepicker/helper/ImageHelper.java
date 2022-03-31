@@ -35,7 +35,7 @@ public class ImageHelper {
         // Create the storage directory if it does not exist
         if (!mediaStorageDir.exists()) {
             if (!mediaStorageDir.mkdirs()) {
-                Log.d(TAG, "Oops! Failed create " + path);
+                Log.d(TAG, "Opps! Failed create " + path);
                 return null;
             }
         }
@@ -47,7 +47,7 @@ public class ImageHelper {
         try {
             imageFile = File.createTempFile(imageFileName, ".jpg", mediaStorageDir);
         } catch (IOException e) {
-            Log.d(TAG, "Oops! Failed create " + imageFileName + " file");
+            Log.d(TAG, "Opps! Failed create " + imageFileName + " file");
         }
         return imageFile;
     }
