@@ -283,28 +283,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             public void onClick(View view) {
 
 
-//                Intent intent = new Intent(MainActivity.this, EditProfile.class);
-//                startActivity(intent);
-//                overridePendingTransition(R.anim.right_enter, R.anim.left_out);
             }
         });
-//        if (method.pref.getBoolean(method.pref_login, false)) {
-//            navigationView.getMenu().getItem(1).setVisible(true);
-//            navigationView.getMenu().getItem(2).setVisible(true);
-//            navigationView.getMenu().getItem(3).setVisible(true);
-//            navigationView.getMenu().getItem(4).setVisible(true);
-//
-//
-//        } else {
-//            navigationView.getMenu().getItem(1).setVisible(false);
-//            navigationView.getMenu().getItem(3).setVisible(false);
-//
-//
-//        }
-//        navigationView.getMenu().getItem(0).setChecked(true);
-        //DisableWithDrawal(method.pref.getString(method.Id, null));
 
 
+        binding.homeLogo.setImageTintList(ContextCompat.getColorStateList(MainActivity.this, R.color.white));
+        binding.homeTxt.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.white));
+        binding.homeLayout.setBackgroundTintList(getApplicationContext().getResources().getColorStateList(R.color.black));
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, new HomeFragment()).commit();
+        overridePendingTransition(R.anim.right_enter, R.anim.left_out);
+        HomeFragment.TYTPE.equals("2");
         fullscreen();
         initMain();
 

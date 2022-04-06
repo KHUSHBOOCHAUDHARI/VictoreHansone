@@ -65,7 +65,7 @@ import cz.msebera.android.httpclient.Header;
 
 public class HomeFragment extends Fragment implements OnLikeListener, OnAnimationEndListener {
     public static final int ITEMS_PER_AD = 9;
-    public static LottieAnimationView progressBar;
+    public static ProgressBar progressBar;
     public static String TYTPE = "";
     HomeFragmentBinding binding;
     Method method;

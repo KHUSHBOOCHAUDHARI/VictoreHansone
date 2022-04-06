@@ -50,7 +50,7 @@ public class SubscribeActivity extends AppCompatActivity {
     private List<SubscriptionModel> getData()
     {
         List<SubscriptionModel> list = new ArrayList<>();
-        list.add(new SubscriptionModel("1", "Monthly","Plan" ,"$5", "This is a recurring one month paymentof a small fee."));
+        list.add(new SubscriptionModel("1", "Monthly","Plan" ,"$5", "This is a recurring one month payment of a small fee."));
         list.add(new SubscriptionModel("2", "Yearly","Plan" ,"$50", "It is a one year payment of a small fee. Just have a test."));
         list.add( new SubscriptionModel("3", "One Time", "One Month", "$5", "This subscription offers a one-time, one-month payment for those who want to try out the subscription and for those who would like to pay by the month."));
         list.add( new SubscriptionModel("4","One Time","One Year","$50","This subscription offers a one-time annual payment for those who want to try out the subscription and for those who would like to pay by the year."));

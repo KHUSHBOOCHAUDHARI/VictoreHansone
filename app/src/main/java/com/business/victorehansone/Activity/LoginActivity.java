@@ -483,8 +483,11 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                                         Log.d("response",  picture);
                                         // Picasso.with(context).load(picture).placeholder(R.mipmap.ic_launcher).into(userIv);
                                         //AuthenticationcheckFacebook(facebook_uid,"facebook")       ;                                 //mPb.setVisibility(View.GONE);
+                                        if (method.isNetworkAvailable(LoginActivity.this)) {
+                                            FacebookAuthentication("social_login",email,facebook_uid,regId,"facebook",picture,name,first_name,last_name);                                        } else {
+                                            method.alertBox(getResources().getString(R.string.internet_connection));
+                                        }
 
-                                        FacebookAuthentication("social_login",email,facebook_uid,regId,"facebook",picture,name,first_name,last_name);
                                     }
                                 } catch (JSONException e) {
                                     e.printStackTrace();
@@ -624,15 +627,6 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             }
         });
     }
-
-
-
-
-
-
-
-
-
     //Login Api
     public void login(String email, String sendPassword,String F,String firebase_token ) {
         binding.progressBar.setVisibility(View.VISIBLE);
@@ -741,14 +735,22 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             }
         });
     }
-
     //FogetPassword AlertBox
     public void AlertForgetPassword() {
         final Dialog dialog = new Dialog(LoginActivity.this, android.R.style.Theme_Translucent_NoTitleBar);
         dialog.setContentView(R.layout.dialog_forgetpassword);
         txtDialogMessage = dialog.findViewById(R.id.for_email_edt);
+        ImageView cancle=dialog.findViewById(R.id.cancle);
         progressBardialog = dialog.findViewById(R.id.progressBardialog);
         txtSend = dialog.findViewById(R.id.send_btn);
+        cancle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+
         txtSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -775,7 +777,6 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         });
         dialog.show();
     }
-
     //Login Api
     public void ForgetPassword(String email,String F) {
         binding.progressBar.setVisibility(View.VISIBLE);
@@ -830,15 +831,11 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             }
         });
     }
-
-
     //SOCIAL LOGIN
-
     //Google Login
     @Override public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
         Log.e("GOOGLE_LOGIN", "onConnectionFailed:" + connectionResult);
     }
-
     private void handleSignInResult(Task<GoogleSignInAccount> task) {
         try {
             GoogleSignInAccount account = task.getResult(ApiException.class);
@@ -864,7 +861,14 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             Log.e("GOOGLEEMAIL","++++++++"+google_email);
             Log.e("GOOGLEAPHOTO","++++++++"+google_photo);
             Log.e("Response from google","Google response : " + google_id_token);
-            GmailAuthentication("social_login",google_email,google_id,regId,"google",google_photo,google_firstname,account.getGivenName(),account.getFamilyName());
+            if (method.isNetworkAvailable(LoginActivity.this)) {
+                GmailAuthentication("social_login",google_email,google_id,regId,"google",google_photo,google_firstname,account.getGivenName(),account.getFamilyName());
+            } else {
+                method.alertBox(getResources().getString(R.string.internet_connection));
+            }
+
+
+
 
 //            AuthenticationcheckGoogle(google_id,"google");
         } catch (ApiException e) {
@@ -878,7 +882,6 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
 
         }
     }
-
     @SuppressLint("RestrictedApi")
     private void signIn() {
 
@@ -895,7 +898,6 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         Log.e("Google Interpretation","Interpret Data : " + mGoogleSignInClient);
         Log.e("Google data","DatFa : " +RC_SIGN_IN);
     }
-
     public void GmailAuthentication(String f, String useremail,String user_auth_key,String firebase_token,String type,String profile_image,String user_name,String first_name,String last_name) {
         binding.progressBar.setVisibility(View.VISIBLE);
         AsyncHttpClient client = new AsyncHttpClient();
@@ -1024,7 +1026,6 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         }
 
     }
-
     //Full Screen
     public void fullscreen() {
 
@@ -1084,7 +1085,14 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                     Log.e("Twitter", TwitterId.toString());
 
 
-                    TwitterAuthentication("social_login",userName, String.valueOf(TwitterId),regId,"twitter",imageProfileUrl,userName,FirstName,LastName);
+
+                    if (method.isNetworkAvailable(LoginActivity.this)) {
+                        TwitterAuthentication("social_login",userName, String.valueOf(TwitterId),regId,"twitter",imageProfileUrl,userName,FirstName,LastName);
+
+
+                    } else {
+                        method.alertBox(getResources().getString(R.string.internet_connection));
+                    }
 
 
 
@@ -1115,11 +1123,6 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             }
         });
     }
-    /**
-     * get authenticates user session
-     *
-     * @return twitter session
-     */
     private TwitterSession getTwitterSession() {
         TwitterSession session = TwitterCore.getInstance().getSessionManager().getActiveSession();
 
@@ -1130,7 +1133,5 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
 
         return session;
     }
-
-
 
 }

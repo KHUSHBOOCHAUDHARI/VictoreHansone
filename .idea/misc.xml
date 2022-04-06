@@ -85,7 +85,7 @@
         <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/category_fragment.xml" value="0.2" />
         <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/comment_list.xml" value="0.18" />
         <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/dialog_filter.xml" value="0.25" />
-        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/dialog_forgetpassword.xml" value="0.27307692307692305" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/dialog_forgetpassword.xml" value="0.22" />
         <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/fragment_home.xml" value="0.27307692307692305" />
         <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/history_fragment.xml" value="0.27692307692307694" />
         <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/home_fragment.xml" value="0.18" />
@@ -98,6 +98,7 @@
         <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/received_fragment.xml" value="0.27692307692307694" />
         <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/savepost_list.xml" value="0.27692307692307694" />
         <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/search_list_item.xml" value="0.27692307692307694" />
+        <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/send_fragment.xml" value="0.27692307692307694" />
         <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/slide_item_container.xml" value="0.2" />
         <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/subscription_layout.xml" value="0.18" />
         <entry key="..\:/Backup/VictoreHansone/app/src/main/res/layout/subscription_list_history.xml" value="0.21981424148606812" />
