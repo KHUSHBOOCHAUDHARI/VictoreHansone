@@ -136,7 +136,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 RedirectLink("https://www.facebook.com/VDHansonsCup");
             }
         });
-
         if(method.pref.getBoolean(method.pref_login, false))
         {
             if(method.pref.getString(method.current_plane,null).equals("free_subscription") || method.pref.getString(method.current_plane,null).equals(""))
@@ -148,8 +147,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                        // Toast.makeText(MainActivity.this, " sucesfull ", Toast.LENGTH_SHORT).show();
                     }
                 });
-
-
                 AdRequest adRequest = new AdRequest.Builder().build();
                 binding.adView.loadAd(adRequest);
             }
@@ -157,7 +154,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 binding.adView.setVisibility(View.GONE);
             }
         }
-
         else
         {
             binding.adView.setVisibility(View.VISIBLE);
@@ -167,21 +163,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                   //  Toast.makeText(MainActivity.this, "sucesfull ", Toast.LENGTH_SHORT).show();
                 }
             });
-
-
             AdRequest adRequest = new AdRequest.Builder().build();
             binding.adView.loadAd(adRequest);
         }
-
-//        MobileAds.initialize(MainActivity.this, new OnInitializationCompleteListener() {
-//            @Override
-//            public void onInitializationComplete(InitializationStatus initializationStatus) {
-//                Toast.makeText(MainActivity.this, "sucesfull ", Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//        AdRequest adRequest = new AdRequest.Builder().build();
-//        binding.adView.loadAd(adRequest);
-
         menu = findViewById(R.id.menu);
         txt_toolbartitle.setText(getResources().getString(R.string.app_name));
         txt_toolbartitle.setVisibility(View.VISIBLE);
@@ -194,7 +178,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 overridePendingTransition(R.anim.right_enter, R.anim.left_out);
             }
         });
-
         int[] color = {getResources().getColor(R.color.colorPrimary), getResources().getColor(R.color.white)};
         float[] position = {0, 1};
         Shader.TileMode tile_mode = Shader.TileMode.MIRROR; // or TileMode.REPEAT;
@@ -659,7 +642,5 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         i.setData(Uri.parse(url));
         startActivity(i);
     }
-
-
 }
 

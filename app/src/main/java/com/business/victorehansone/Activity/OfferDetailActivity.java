@@ -18,10 +18,7 @@ import com.business.victorehansone.databinding.ActivityOfferDetailBinding;
 
 public class OfferDetailActivity extends AppCompatActivity {
     private ActivityOfferDetailBinding binding;
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding= DataBindingUtil.setContentView(OfferDetailActivity.this,R.layout.activity_offer_detail);
 

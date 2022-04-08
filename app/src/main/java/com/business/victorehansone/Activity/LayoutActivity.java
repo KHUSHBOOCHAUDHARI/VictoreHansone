@@ -77,7 +77,6 @@ public class LayoutActivity extends AppCompatActivity {
 
         fullscreen();
     }
-
     public void fullscreen() {
 
         if (Build.VERSION.SDK_INT >= 19 && Build.VERSION.SDK_INT < 21) {
@@ -93,7 +92,6 @@ public class LayoutActivity extends AppCompatActivity {
         }
 
     }
-
     public static void setWindowFlag(Activity activity, final int bits, boolean on) {
         Window win = activity.getWindow();
         WindowManager.LayoutParams winParams = win.getAttributes();
@@ -104,7 +102,6 @@ public class LayoutActivity extends AppCompatActivity {
         }
         win.setAttributes(winParams);
     }
-
     public void onRadioButtonClicked(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 

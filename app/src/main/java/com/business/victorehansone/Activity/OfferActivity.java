@@ -60,15 +60,10 @@ public class OfferActivity extends AppCompatActivity {
         if (Method.isNetworkAvailable(OfferActivity.this)) {
             binding.textKeywordHide.setVisibility(View.GONE);
             OfferList("","offers");
-        }
-        else
-        {
+        } else {
             binding.textKeywordHide.setVisibility(View.VISIBLE);
             method.alertBox("Internet connection not available");
         }
-
-
-
         fullscreen();
     }
     //Login Api
@@ -147,7 +142,6 @@ public class OfferActivity extends AppCompatActivity {
             }
         });
     }
-
     //Full Screen
     public static void setWindowFlag(Activity activity, final int bits, boolean on) {
         Window win = activity.getWindow();

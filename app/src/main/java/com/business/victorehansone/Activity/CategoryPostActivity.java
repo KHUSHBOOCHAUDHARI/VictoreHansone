@@ -60,10 +60,7 @@ public class CategoryPostActivity extends AppCompatActivity {
     public static String newUltra = "";
     private int oldPosition = 0;
     private int pagination_index = 1;
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(CategoryPostActivity.this, R.layout.activity_category_post);
 
@@ -263,7 +260,6 @@ public class CategoryPostActivity extends AppCompatActivity {
 
 
     }
-
     private void CategoryPostList(String page, String per_page, String Category) {
         if (adapter == null) {
             list.clear();
@@ -409,7 +405,6 @@ public class CategoryPostActivity extends AppCompatActivity {
             }
         });
     }
-
     //Full Screen
     public static void setWindowFlag(Activity activity, final int bits, boolean on) {
         Window win = activity.getWindow();
@@ -421,7 +416,6 @@ public class CategoryPostActivity extends AppCompatActivity {
         }
         win.setAttributes(winParams);
     }
-
     public void fullscreen() {
 
         if (Build.VERSION.SDK_INT >= 19 && Build.VERSION.SDK_INT < 21) {
@@ -438,7 +432,6 @@ public class CategoryPostActivity extends AppCompatActivity {
 
 
     }
-
     public void SessionArray(String jsonArray) {
         binding.textViewCategory.setVisibility(View.GONE);
         binding.nestedScrollViewHomeFragment.setVisibility(View.VISIBLE);

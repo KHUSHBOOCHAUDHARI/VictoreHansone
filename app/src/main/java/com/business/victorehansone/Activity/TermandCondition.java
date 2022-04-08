@@ -53,12 +53,9 @@ public class TermandCondition extends AppCompatActivity {
                 finish();
             }
         });
-
         if (Method.isNetworkAvailable(TermandCondition.this)) {
             AboutUs("2");
-        }
-        else
-        {
+        } else {
             if (!TextUtils.isEmpty(method.pref.getString(method.JsonString,null))) {
                 binding.textViewCategory.setVisibility(View.GONE);
                 try {
@@ -91,11 +88,6 @@ public class TermandCondition extends AppCompatActivity {
                 binding.textViewCategory.setText(getResources().getString(R.string.internet_connection));
             }
         }
-
-
-
-
-
         fullscreen();
     }
     public void fullscreen() {

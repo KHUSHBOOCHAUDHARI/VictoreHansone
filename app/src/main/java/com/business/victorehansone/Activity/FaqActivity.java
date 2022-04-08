@@ -33,7 +33,6 @@ import cz.msebera.android.httpclient.Header;
 public class FaqActivity extends AppCompatActivity {
     Method method;
     private ActivityFaqBinding binding;
-
     public static void setWindowFlag(Activity activity, final int bits, boolean on) {
         Window win = activity.getWindow();
         WindowManager.LayoutParams winParams = win.getAttributes();
@@ -44,9 +43,7 @@ public class FaqActivity extends AppCompatActivity {
         }
         win.setAttributes(winParams);
     }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(FaqActivity.this, R.layout.activity_faq);
         method = new Method(FaqActivity.this);

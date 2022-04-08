@@ -109,7 +109,7 @@ import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 import retrofit2.Call;
 
 public class LoginActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener{
-    private ActivityLoginBinding binding;
+   private ActivityLoginBinding binding;
     String EmailId, Password;
     Method method;
     String google_firstname, google_lastname, google_email, google_account_name, google_id_token, google_photo, google_id,devicetoken,deviceid;
@@ -134,12 +134,10 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     AccessToken access_token;
     GraphRequest request;
     private String email,facebook_uid,first_name,last_name,social_id,name,picture;
-
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -151,7 +149,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         Twitter.initialize(twitterConfig);
         binding = DataBindingUtil.setContentView(LoginActivity.this, R.layout.activity_login);
         method = new Method(LoginActivity.this);
-       customLoginButton = (ImageView) findViewById(R.id.orders_image);
+        customLoginButton = (ImageView) findViewById(R.id.orders_image);
         pref = getSharedPreferences(mypreference, 0);
         editor = pref.edit();
         SharedPreferences pref = getApplicationContext().getSharedPreferences(ConfigNew.SHARED_PREF, 0);
@@ -305,7 +303,6 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
 
         fullscreen();
     }
-
     //Validation For Login
     public void form() {
         EmailId = binding.emailEdt.getText().toString();
@@ -327,7 +324,6 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             }
         }
     }
-
     public void TwitterAuthentication(String f, String useremail,String user_auth_key,String firebase_token,String type,String profile_image,String user_name,String first_name,String last_name) {
         binding.progressBar.setVisibility(View.VISIBLE);
         AsyncHttpClient client = new AsyncHttpClient();
@@ -428,7 +424,6 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             }
         });
     }
-
     //For Facebook Login
     private void facebookLoginSignup() {
         FacebookSdk.sdkInitialize(this.getApplicationContext());

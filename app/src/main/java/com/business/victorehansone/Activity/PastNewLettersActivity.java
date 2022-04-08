@@ -16,9 +16,7 @@ import com.business.victorehansone.databinding.ActivityPastNewLettersBinding;
 
 public class PastNewLettersActivity extends AppCompatActivity {
     private ActivityPastNewLettersBinding binding;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding= DataBindingUtil.setContentView(PastNewLettersActivity.this,R.layout.activity_past_new_letters);
         binding.menu.setOnClickListener(new View.OnClickListener() {
@@ -29,9 +27,7 @@ public class PastNewLettersActivity extends AppCompatActivity {
             }
         });
         fullscreen();
-
     }
-
     //Full Screen
     public static void setWindowFlag(Activity activity, final int bits, boolean on) {
         Window win = activity.getWindow();

@@ -68,10 +68,8 @@ public class BlogDetailActivity extends AppCompatActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager(BlogDetailActivity.this, LinearLayoutManager.VERTICAL, false);
         binding.commentlist.setLayoutManager(layoutManager);
         binding.commentlist.setFocusable(false);
-        if(method.pref.getBoolean(method.pref_login, false))
-        {
-            if(method.pref.getString(method.current_plane,null).equals("free_subscription") || method.pref.getString(method.current_plane,null).equals(""))
-            {
+        if(method.pref.getBoolean(method.pref_login, false)) {
+            if(method.pref.getString(method.current_plane,null).equals("free_subscription") || method.pref.getString(method.current_plane,null).equals("")) {
                 binding.adView.setVisibility(View.VISIBLE);
                 MobileAds.initialize(BlogDetailActivity.this, new OnInitializationCompleteListener() {
                     @Override
@@ -79,45 +77,28 @@ public class BlogDetailActivity extends AppCompatActivity {
                       //  Toast.makeText(BlogDetailActivity.this, " sucesfull ", Toast.LENGTH_SHORT).show();
                     }
                 });
-
-
                 AdRequest adRequest = new AdRequest.Builder().build();
                 binding.adView.loadAd(adRequest);
-            }
-            else {
+            } else {
                 binding.adView.setVisibility(View.GONE);
                 binding.adView.destroy();
                 binding.adView.setVisibility(View.GONE);
             }
         }
         textSize= (int) binding.newsTxt.getTextSize();
-        if (method.pref.getInt(String.valueOf(method.inc),0) == 0)
-        {
+        if (method.pref.getInt(String.valueOf(method.inc),0) == 0) {
             binding.newsTxt.setTextSize(12);
-
-        }
-        else
-        {
+        } else {
             binding.newsTxt.setTextSize(method.pref.getInt(String.valueOf(method.inc),0));
-
         }
-
-
-
-        if (method.pref.getInt(String.valueOf(method.dec),0) == 0)
-        {
+        if (method.pref.getInt(String.valueOf(method.dec),0) == 0) {
             binding.headlineTxt.setTextSize(14);
-        }
-        else
-        {
+        } else {
             binding.headlineTxt.setTextSize(method.pref.getInt(String.valueOf(method.dec),0));
         }
-
         CommentListAPI();
-
-            binding.share.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
+        binding.share.setOnClickListener(new View.OnClickListener() {
+        @Override public void onClick(View view) {
                     Intent myIntent = new Intent(Intent.ACTION_SEND);
                     myIntent.setType("text/plain");
                     String shareBody = getIntent().getStringExtra("link");
@@ -126,7 +107,7 @@ public class BlogDetailActivity extends AppCompatActivity {
                     myIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
                     startActivity(Intent.createChooser(myIntent, "Share using"));
                 }
-            });
+        });
         binding.menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -137,8 +118,6 @@ public class BlogDetailActivity extends AppCompatActivity {
         });
         PostComentAPI();
         BlodDetailAPI();
-
-
         fullscreen();
     }
     public void  BlodDetailpager(String Id) {
@@ -157,20 +136,18 @@ public class BlogDetailActivity extends AppCompatActivity {
                 Log.e("Url------->", res.toString());
                 try {
                     JSONObject jsonObject = new JSONObject(res);
-                        binding.scrollview.setVisibility(View.VISIBLE);
-                        String id = jsonObject.getString("id");
-                        String Date = jsonObject.getString("date");
-                        String titlee = jsonObject.getString("title");
-                        Log.e("djksahdjksad",String.valueOf(Html.fromHtml (titlee.toString())));
-                        String Image=jsonObject.getString("jetpack_featured_media_url");
-                        JSONObject json_title=jsonObject.getJSONObject("title");
-                        String Title=json_title.getString("rendered");
-                        JSONObject json_object = jsonObject.getJSONObject("content");
-                        String rendered = json_object.getString("rendered");
-                        JSONObject link_object=jsonObject.getJSONObject("guid");
-                        String Link=link_object.getString("rendered");
-
-
+                    binding.scrollview.setVisibility(View.VISIBLE);
+                    String id = jsonObject.getString("id");
+                    String Date = jsonObject.getString("date");
+                    String titlee = jsonObject.getString("title");
+                    Log.e("djksahdjksad",String.valueOf(Html.fromHtml (titlee.toString())));
+                    String Image=jsonObject.getString("jetpack_featured_media_url");
+                    JSONObject json_title=jsonObject.getJSONObject("title");
+                    String Title=json_title.getString("rendered");
+                    JSONObject json_object = jsonObject.getJSONObject("content");
+                    String rendered = json_object.getString("rendered");
+                    JSONObject link_object=jsonObject.getJSONObject("guid");
+                    String Link=link_object.getString("rendered");
                     binding.share.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -183,7 +160,6 @@ public class BlogDetailActivity extends AppCompatActivity {
                             startActivity(Intent.createChooser(myIntent, "Share using"));
                         }
                     });
-
                     binding.share.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -196,39 +172,24 @@ public class BlogDetailActivity extends AppCompatActivity {
                             startActivity(Intent.createChooser(myIntent, "Share using"));
                         }
                     });
-
-
-
-
-
-
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1 && BlogDetailActivity.this.isDestroyed()) {
                         return;
                     } else {
                         Glide.with(getApplicationContext()).load(Image).into(binding.image);
-
-                    }
-
-
-
-                          binding.vdhTxt.setText(newUltra.toString());
-                        binding.dateTxt.setText(date_formatnew(Date.toString()));
-                        binding.newsTxt.setText(Html.fromHtml(rendered.toString()));
-                        binding.headlineTxt.setText(Html.fromHtml(Title.toString()));
-
+                        }
+                    binding.vdhTxt.setText(newUltra.toString());
+                    binding.dateTxt.setText(date_formatnew(Date.toString()));
+                    binding.newsTxt.setText(Html.fromHtml(rendered.toString()));
+                    binding.headlineTxt.setText(Html.fromHtml(Title.toString()));
                     binding.progressBar.setVisibility(View.GONE);
-
-
                     method.editor.putString(method.detailJsonObject, jsonObject.toString());
                     method.editor.commit();
-
                 } catch (JSONException e) {
                     e.printStackTrace();
                     binding.progressBar.setVisibility(View.GONE);
                     method.alertBox(getResources().getString(R.string.failed_try_again));
                 }
             }
-
             @Override
             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
                 binding.progressBar.setVisibility(View.GONE);
@@ -246,14 +207,11 @@ public class BlogDetailActivity extends AppCompatActivity {
         client.get(Url, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-
                 if (BlogDetailActivity.this != null) {
                     Log.d("Response", new String(responseBody));
                     String res = new String(responseBody);
-
                     try {
                         JSONArray jsonArray = new JSONArray(res);
-
                         if (jsonArray != null) {
                             tot_comments = String.valueOf(jsonArray.length());
                             Log.e("commenttxt", String.valueOf(tot_comments));
@@ -275,16 +233,14 @@ public class BlogDetailActivity extends AppCompatActivity {
                             JSONObject author_avatar_urls_obj=jsonObject.getJSONObject("author_avatar_urls");
                             String author_avatar_urls=author_avatar_urls_obj.getString("48");
                             list.add(new CommentModel(id,author_name,date,author_avatar_urls,comment));
-
-
                         }
                         binding.progressBar.setVisibility(View.GONE);
-                            adapter = new CommentAdapter(BlogDetailActivity.this,list );
-                            binding.commentlist.setAdapter(adapter);
-                            binding.textViewCategory.setVisibility(View.GONE);
-                            binding.progressBar.setVisibility(View.GONE);
-                            binding.progressbarLoadmore.setVisibility(View.GONE);
-                            binding.commentlist.setVisibility(View.VISIBLE);
+                        adapter = new CommentAdapter(BlogDetailActivity.this,list );
+                        binding.commentlist.setAdapter(adapter);
+                        binding.textViewCategory.setVisibility(View.GONE);
+                        binding.progressBar.setVisibility(View.GONE);
+                        binding.progressbarLoadmore.setVisibility(View.GONE);
+                        binding.commentlist.setVisibility(View.VISIBLE);
                     } catch (JSONException e) {
                         e.printStackTrace();
                         isOver = true;
@@ -317,43 +273,32 @@ public class BlogDetailActivity extends AppCompatActivity {
         Log.e("pastfsdf",params.toString());
         String url = Apis.ROOT_URLLL + getString(R.string.login_ic_user);
         String someData = "{\"user_id\":\""+user_id+"\",\"post_id\":\""+post_id+"\",\"f\":\""+F+"\",\"comment_data\":\""+ URLEncoder.encode(comment_data)+"\"}";
-
         StringEntity entity = null;
         try {
             entity = new StringEntity(someData);
             entity.setContentEncoding(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
-        } catch(Exception e) {
-
-        }
+        } catch(Exception e) { }
         Log.e("lollo",entity.toString());
         client.addHeader("api-token","4db248bc10877bef6f3008ef64e5c76a");
         Log.e("Url------->", url);
         client.post(BlogDetailActivity.this,url, entity,"application/json", new AsyncHttpResponseHandler() {
-
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-
                 String res = new String(responseBody);
                 Log.e("********************", "hUrrya :::::::::::::::::"+statusCode);
                 Log.d("Response", new String(responseBody));
                 Log.e("Urllll------->", res.toString());
-
-                    if (statusCode == 200) {
+                if (statusCode == 200) {
                         Toast.makeText(getApplicationContext(),"Thank you for comment , we will check and approved the comment shortly.",Toast.LENGTH_LONG).show();
                         binding.msgTxt.setText("");
-                        }
-                    else {
+                        } else {
                         binding.Progressbar.setVisibility(View.GONE);
 
                     }
-                    binding.Progressbar.setVisibility(View.GONE);
-
-            }
-
-            @Override
-            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
                 binding.Progressbar.setVisibility(View.GONE);
-
+            }
+            @Override public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+                binding.Progressbar.setVisibility(View.GONE);
                 method.alertBox(getResources().getString(R.string.something_went_wrong));
             }
         });
@@ -370,25 +315,21 @@ public class BlogDetailActivity extends AppCompatActivity {
         win.setAttributes(winParams);
     }
     public void fullscreen() {
-
         if (Build.VERSION.SDK_INT >= 19 && Build.VERSION.SDK_INT < 21) {
             setWindowFlag(this, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, true);
         }
         if (Build.VERSION.SDK_INT >= 19) {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
         }
-
         if (Build.VERSION.SDK_INT >= 21) {
             setWindowFlag(this, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, false);
             getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
-
     }
     public String date_formatnew(String strDate) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         try {
             Date varDate = dateFormat.parse(strDate);
-
             dateFormat = new SimpleDateFormat("MMMM dd, yyyy");
             System.out.println("Date :" + dateFormat.format(varDate));
             return dateFormat.format(varDate);
@@ -396,8 +337,6 @@ public class BlogDetailActivity extends AppCompatActivity {
             e.printStackTrace();
             return strDate;
         }
-
-
     }
     public void BlodDetailAPI() {
         if (getIntent().getStringExtra("Type").equals("Search"))
@@ -405,9 +344,7 @@ public class BlogDetailActivity extends AppCompatActivity {
             if (Method.isNetworkAvailable(BlogDetailActivity.this)) {
                 BlodDetailpager(getIntent().getStringExtra("Id"));
                 binding.titleTxt.setText(getIntent().getStringExtra("titlename"));
-            }
-            else
-            {
+            } else {
                 try {
                     if (!method.pref.getString(method.detailJsonObject, null).equals("") || method.pref.getString(method.detailJsonObject, null).isEmpty()) {
                         JSONObject jsonObject = new JSONObject(method.pref.getString(method.detailJsonObject, null));
@@ -447,15 +384,16 @@ public class BlogDetailActivity extends AppCompatActivity {
                         method.editor.putString(method.detailJsonObject, jsonObject.toString());
                         method.editor.commit();
                     }
-                } catch(JSONException e){
+                }
+                catch(JSONException e){
                     e.printStackTrace();
                     binding.progressBar.setVisibility(View.GONE);
                     method.alertBox(getResources().getString(R.string.failed_try_again));
                 }
-
             }
         }
-        else {
+        else
+        {
             binding.titleTxt.setText(Html.fromHtml(getIntent().getStringExtra("titlename")));
             binding.vdhTxt.setText(getIntent().getStringExtra("VDH"));
             binding.dateTxt.setText(getIntent().getStringExtra("date"));
